@@ -57,21 +57,24 @@
           "type": "benefit",
           "settings": {
             "url": "",
-            "text": "Benefit Label"
+            "text": "Benefit Label",
+            "label": ""
           }
         },
         "benefit2": {
           "type": "benefit",
           "settings": {
             "url": "",
-            "text": "Benefit Label"
+            "text": "Benefit Label",
+            "label": ""
           }
         },
         "benefit3": {
           "type": "benefit",
           "settings": {
             "url": "",
-            "text": "Benefit Label"
+            "text": "Benefit Label",
+            "label": ""
           }
         }
       },
@@ -85,7 +88,7 @@
         "subtitle": "",
         "pt": 4,
         "pb": 4,
-        "background": "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)"
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
       }
     },
     "ticker": {
@@ -131,7 +134,9 @@
       "type": "content-section",
       "settings": {
         "title": "“a woman for <br>a woman”",
-        "text": "<p>We don't look at our website as a business, we look at it as a women's club where every woman can get support and understanding, all our products are things that solve the problems you are facing, we are a place where you are understood and supported, where women share their experiences. We are glad that we are together<\/p><hr><h5 class=\"text-uppercase\">Join over<\/h5><h2 class=\"fw-bold\" style=\"font-size:64px;\">350 000<\/h2><p>People who already live their best lives with Lumiway<\/p>"
+        "text": "<p>We don't look at our website as a business, we look at it as a women's club where every woman can get support and understanding, all our products are things that solve the problems you are facing, we are a place where you are understood and supported, where women share their experiences. We are glad that we are together<\/p><hr><h5 class=\"text-uppercase\">Join over<\/h5><h2 class=\"fw-bold\" style=\"font-size:64px;\">350 000<\/h2><p>People who already live their best lives with Lumiway<\/p>",
+        "background": "linear-gradient(180deg, #F0F9FE 0%, #F0F9FE 100%)",
+        "text_white": false
       }
     },
     "bestsellers-section": {
@@ -209,9 +214,9 @@
       ],
       "settings": {
         "title": "Lumiway FAQs",
-        "description": "",
+        "description": "<p>If you need more information or help choosing the right product, our 24\/7 care <strong>girls<\/strong> would love to hear from you and <strong>help you<\/strong> find the right product and recommended amount to <strong>will make you shine<\/strong>!<\/p>",
         "btn_url": "",
-        "btn_label": "FAQ Label"
+        "btn_label": "I have a question"
       }
     },
     "feedback-section": {
