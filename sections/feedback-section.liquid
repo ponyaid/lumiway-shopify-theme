@@ -13,10 +13,13 @@
           <div class="position-absolute top-0 start-0 end-0 h-100 d-block d-lg-none" style="background: linear-gradient(180deg, rgba(1, 1, 1, 0.00) 0%, rgba(1, 1, 1, 0.40) 80%);margin: 0 calc(var(--bs-gutter-x)* -0.5)"></div>
           <div class="d-flex flex-column text-white h-100 position-relative">
             <h2 class="fw-bold text-capitalize mt-5 mt-lg-auto mb-4 text-center text-lg-start">
-              Questions? <br>Get in touchwith our wellness experts
+              {{ section.settings.title }}
             </h2>
             <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-start gap-2">
-              <a href="#" class="rounded py-2 px-3 bg-white bg-opacity-10">
+              <a
+                href="{{ section.settings.phone_url }}"
+                target="_blank"
+                class="rounded py-2 px-3 bg-white bg-opacity-10">
                 <i
                   width="20"
                   height="20"
@@ -32,7 +35,10 @@
                   class="me-2"></i>
                 <span class="fw-semibold text-uppercase">Chat</span>
               </a>
-              <a href="#" class="rounded py-2 px-3 bg-white bg-opacity-10">
+              <a
+                href="{{ section.settings.mail_url }}"
+                target="_blank"
+                class="rounded py-2 px-3 bg-white bg-opacity-10">
                 <i
                   width="20"
                   height="20"
@@ -72,6 +78,22 @@
 {% schema %}
   {
     "name": "feedback-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Questions?<br>Get in touchwith our wellness experts"
+      }, {
+        "type": "url",
+        "id": "phone_url",
+        "label": "Phone Url"
+      }, {
+        "type": "url",
+        "id": "mail_url",
+        "label": "Mail Url"
+      }
+    ],
     "presets": [
       {
         "category": "Content",
