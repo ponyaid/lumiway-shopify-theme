@@ -1,0 +1,65 @@
+<section class="py-5">
+    <div class="container">
+        <div class="banner">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <div class="text-center text-lg-start">
+                        <h2 class="h1 fw-bold">{{ section.settings.title }}</h2>
+                        <p class="m-0 mb-lg-2">{{ section.settings.description }}</p>
+                        <a href="{{ section.settings.btn_url }}" class="btn px-0">
+                            {{ section.settings.btn_label }}
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 d-flex order-first order-lg-0">
+                    {% if section.settings.img %}
+                        {{ section.settings.img | image_url: width: 736 | image_tag: class: 'img-fluid m-auto', loading: 'lazy' }}
+                    {% else %}
+                        {{ 'lifestyle-1' | placeholder_svg_tag: 'img-fluid m-auto' }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "banner-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Banner Title",
+            "default": "Banner Section Title"
+        },
+        {
+            "type": "text",
+            "id": "description",
+            "label": "Banner Description"
+        },
+        {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Banner URL"
+        },
+        {
+            "type": "text",
+            "id": "btn_label",
+            "label": "Banner Button Label",
+            "default": "Button Label"
+        },
+        {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Banner Image"
+        }
+    ],
+    "presets": [
+        {
+            "category": "Content",
+            "name": "Banner Section"
+        }
+    ]
+}
+{% endschema %}

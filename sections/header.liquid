@@ -1,0 +1,203 @@
+<header class="header bg-white shadow-sm position-relative" id="header">
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container-fluid container-md">
+      <div class="header__layout">
+        <div class="d-block d-lg-none">
+          <ul class="navbar-nav flex-row gap-3">
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-expanded="false"
+                aria-controls="navbarNav"
+                aria-label="Toggle navigation">
+                {%- render 'icon'
+                  , icon: 'hamburger' -%}
+              </button>
+            </li>
+            <li class="nav-item d-none d-sm-block">
+              <button
+                class="nav-link"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSearch"
+                aria-expanded="false"
+                aria-controls="collapseSearch">
+                {%- render 'icon'
+                  , icon: 'search' -%}
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex d-lg-block">
+          <a class="navbar-brand m-auto" href="/">
+            {%- if settings.logo != blank -%}
+              <div>
+                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                {{ settings.logo | image_url: width: 600 | image_tag: class: 'header__logo object-fit-contain', widths: widths, height: logo_height, width: settings.logo_width, alt: logo_alt, sizes: sizes, preload: true
+                }}
+              </div>
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+        </div>
+        <div
+          class="collapse navbar-collapse justify-content-center order-last order-lg-0"
+          id="navbarNav"
+          data-bs-parent="#header">
+          <ul class="navbar-nav gap-3">
+
+            {% for link in section.settings.menu.links %}
+
+              {% assign child_list_handle = link.title | handleize %}
+              {% if linklists[child_list_handle].links != blank %}
+                <li class="nav-item dropdown position-relative">
+                  <a
+                    class="header__nav-link nav-link dropdown-toggle"
+                    href="{{ link.url }}"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ link.title }}
+                  </a>
+                  <ul class="dropdown-menu position-absolute start-0 top-100">
+                    {% for childlink in linklists[child_list_handle].links %}
+                      <li>
+                        <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% else %}
+                <li class="nav-item text-nowrap">
+                  <a class="header__nav-link nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="d-flex justify-content-end">
+          <ul class="navbar-nav flex-row gap-3">
+
+            <li class="nav-item d-none d-lg-block">
+              <button
+                class="nav-link"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSearch"
+                aria-expanded="false"
+                aria-controls="collapseSearch">
+                {%- render 'icon'
+                  , icon: 'search' -%}
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="offcanvas"
+                href="#cartDrawer"
+                role="button"
+                aria-controls="cartDrawer">
+                <span class="position-relative">
+                  {%- render 'icon'
+                    , icon: 'cart' -%}
+                </span>
+                <span id="cart-items-badge">{{ cart.item_count }}</span>
+              </a>
+            </li>
+
+            {% if shop.customer_accounts_enabled %}
+              <li class="nav-item dropdown d-none d-sm-block">
+                <button class="nav-link" data-bs-toggle="dropdown">
+                  {%- render 'icon'
+                    , icon: 'account' -%}
+                </button>
+
+                <ul class="dropdown-menu">
+                  {% if customer %}
+                    <li>
+                      <a class="dropdown-item" href="{{ routes.account_url }}">Account</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{{ routes.account_logout_url }}">Logout</a>
+                    </li>
+                  {% else %}
+                    <li>
+                      <a class="dropdown-item" href="{{ routes.account_login_url }}">Login</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{{ routes.account_register_url }}">Register</a>
+                    </li>
+                  {% endif %}
+                </ul>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="collapse"
+    id="collapseSearch"
+    data-bs-parent="#header">
+    <div class="pb-3 pt-1">
+      <div class="container-fluid container-md">
+        <form
+          action="/search"
+          method="get"
+          role="search">
+          <input
+            type="hidden"
+            name="type"
+            value="product" />
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text border-0 bg-light">
+              {%- render 'icon'
+                , icon: 'search'
+                , class: 'header__search-icon' -%}
+            </span>
+            <input
+              name="q"
+              type="text"
+              value="{{ search.terms | escape }}"
+              class="form-control form-control-lg bg-light"
+              aria-describedby="button-search-close"
+              placeholder="Search...">
+            <button
+              class="btn bg-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSearch"
+              aria-expanded="false"
+              aria-controls="collapseSearch"
+              id="button-search-close">
+              <span class="d-block btn-close"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+{%- schema -%}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu"
+      }
+    ]
+  }
+{%- endschema -%}

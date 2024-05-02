@@ -1,0 +1,82 @@
+<section class="position-relative" style="background-color: #FFEED0;">
+  <div class="position-absolute top-0 start-0 w-50 h-100 d-none d-lg-block">
+    {{ 'feedback-pic.jpeg' | asset_img_url: '960x' | img_tag: '', 'w-100 h-100 object-fit-cover', '960x' }}
+  </div>
+  <div class="position-absolute top-0 start-0 w-50 h-100 d-none d-lg-block" style="background: linear-gradient(180deg, rgba(1, 1, 1, 0.00) 0%, rgba(1, 1, 1, 0.40) 80%);"></div>
+  <div class="container-fluid container-lg position-relative">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="py-5 pe-lg-5 h-100 position-relative me-lg-1">
+          <div class="position-absolute top-0 start-0 end-0 h-100 d-block d-lg-none" style="margin: 0 calc(var(--bs-gutter-x)* -0.5)">
+            {{ 'feedback-pic.jpeg' | asset_img_url: '768x' | img_tag: '', 'w-100 h-100 object-fit-cover', '768x' }}
+          </div>
+          <div class="position-absolute top-0 start-0 end-0 h-100 d-block d-lg-none" style="background: linear-gradient(180deg, rgba(1, 1, 1, 0.00) 0%, rgba(1, 1, 1, 0.40) 80%);margin: 0 calc(var(--bs-gutter-x)* -0.5)"></div>
+          <div class="d-flex flex-column text-white h-100 position-relative">
+            <h2 class="fw-bold text-capitalize mt-5 mt-lg-auto mb-4 text-center text-lg-start">
+              Questions? <br>Get in touchwith our wellness experts
+            </h2>
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-start gap-2">
+              <a href="#" class="rounded py-2 px-3 bg-white bg-opacity-10">
+                <i
+                  width="20"
+                  height="20"
+                  data-feather="phone"
+                  class="me-2"></i>
+                <span class="fw-semibold text-uppercase">Call</span>
+              </a>
+              <a href="#" class="rounded py-2 px-3 bg-white bg-opacity-10">
+                <i
+                  width="20"
+                  height="20"
+                  data-feather="message-square"
+                  class="me-2"></i>
+                <span class="fw-semibold text-uppercase">Chat</span>
+              </a>
+              <a href="#" class="rounded py-2 px-3 bg-white bg-opacity-10">
+                <i
+                  width="20"
+                  height="20"
+                  data-feather="mail"
+                  class="me-2"></i>
+                <span class="fw-semibold text-uppercase">Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 py-4 py-md-5">
+        <div class="col-sm-7 m-auto py-md-5">
+          <h2 class="fw-bold text-capitalize">Get 15% off</h2>
+          <p>And reeve valuatile sores and informationon how to support your werl seing. We send2 letter per weet, antpam</p>
+          <div>
+            <form action="post">
+              <div class="input-group mb-3">
+                <span class="input-group-text border-end-0 bg-white">
+                  <i data-feather="mail"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control border-start-0 ps-0"
+                  placeholder="Email address">
+              </div>
+              <button class="btn btn-primary w-100">Get discount</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "feedback-section",
+    "presets": [
+      {
+        "category": "Content",
+        "name": "Feedback Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,110 @@
+<section class="faq py-4 pt-md-5">
+  <div class="container py-3">
+    <div class="row g-3">
+      <div class="faq__content col-12 col-lg-6 pb-lg-5">
+        <div class="col-lg-8 text-center text-lg-start">
+          <h2 class="h1 fw-bold text-capitalize">{{ section.settings.title }}</h2>
+          {% if section.settings.description != blank %}
+            <div class="h6 mb-3">{{ section.settings.description }}</div>
+          {% endif %}
+          <a class="btn d-none d-lg-inline-block px-0" href="{{ section.settings.btn_url }}">
+            {{ section.settings.btn_label }}
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 pb-lg-5">
+        <div class="custom-accordion mb-4">
+          <div class="accordion" id="accordionFAQ">
+            {% for block in section.blocks %}
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button {% if forloop.first == false %}collapsed{% endif %} fw-bold bg-transparent rounded-0 shadow-none px-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-{{ forloop.index }}"
+                    aria-expanded="{{ forloop.first }}"
+                    aria-controls="collapse-{{ forloop.index }}">
+                    {{ block.settings.question }}
+                  </button>
+                </h2>
+                <div
+                  id="collapse-{{ forloop.index }}"
+                  class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+                  data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body px-0">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-outline-primary d-block d-lg-none w-100" href="{{ section.settings.btn_url }}">
+      {{ section.settings.btn_label }}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "faq-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "FAQ Title",
+        "default": "Lumiway FAQs"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "FAQ Description"
+      }, {
+        "type": "url",
+        "id": "btn_url",
+        "label": "FAQ Button URL"
+      }, {
+        "type": "text",
+        "id": "btn_label",
+        "label": "FAQ Button Label",
+        "default": "I have a question"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Question",
+        "type": "question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Default Question"
+          }, {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Content",
+        "name": "FAQ Section",
+        "blocks": [
+          {
+            "type": "question"
+          }, {
+            "type": "question"
+          }, {
+            "type": "question"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

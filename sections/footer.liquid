@@ -1,0 +1,116 @@
+<footer class="py-5 bg-white border-top">
+  <div class="container-fluid container-md">
+    <div class="row pb-5">
+      <div class="col-12 col-md-4">
+        <a class="d-block mb-4 mb-md-5" href="/">
+          {%- if settings.logo != blank -%}
+            <div>
+              {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+              {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+              {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+              {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+              {{ settings.logo | image_url: width: 600 | image_tag: class: '', widths: widths, height: logo_height, width: settings.logo_width, alt: logo_alt, sizes: sizes, preload: true
+              }}
+            </div>
+          {%- else -%}
+            <span class="h2">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+        <div class="d-block">{{ section.settings.contacts }}</div>
+      </div>
+      <div class="col">
+        <div class="row row-cols-1 row-cols-sm-{{ section.settings.col_num }}">
+          {% for block in section.blocks %}
+            {% assign item = block.settings %}
+            <div class="col">
+              <p class="fw-semibold">{{ item.title }}</p>
+              {% assign footer_linklist = item.menu %}
+              <ul class="list-unstyled text-small">
+                {% for link in linklists[footer_linklist].links %}
+                  <li class="mb-3">
+                    <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    <div class="row g-3 row-cols-1 row-cols-md-3 pt-3">
+      <div class="col"></div>
+      <div class="col order-last order-md-0 text-center">
+        <small class="opacity-50">{{ section.settings.copyright }}</small>
+      </div>
+      <div class="col">
+        <div class="d-flex flex-wrap gap-2 mb-2 justify-content-center justify-content-md-end">
+          {% if section.settings.enable_payment_type_icons %}
+            {% for payment_type in shop.enabled_payment_types %}
+              <img src="{{ payment_type | payment_type_img_url }}">
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "richtext",
+        "id": "contacts",
+        "label": "Footer contacts"
+      },
+      {
+        "type": "range",
+        "id": "col_num",
+        "default": 3,
+        "min": 2,
+        "max": 4,
+        "step": 1,
+        "label": "Number of columns"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_payment_type_icons",
+        "label": "Enable Payment Type Icons",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "copyright",
+        "label": "Copyright",
+        "default": "Copyright © 2024 Lumiway. All rights reserved."
+      }
+    ],
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "Navigation",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Quick Links"
+          }, {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

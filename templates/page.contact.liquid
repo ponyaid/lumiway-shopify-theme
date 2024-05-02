@@ -1,0 +1,128 @@
+<section class="py-md-5 position-relative">
+  <div class="position-absolute top-0 start-0 w-50 h-100 d-none d-md-block" style="background: radial-gradient(143.62% 141.42% at 0% 100%, #A0C9EC 8.87%, #D6E031 25.56%, #F04F23 77.99%);"></div>
+  <div class="container-fluid container-md my-md-3 position-relative">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="text-white pe-md-5 position-relative py-4 py-md-0">
+          <div class="position-absolute top-0 start-0 end-0 h-100 d-block d-md-none" style="background: radial-gradient(143.62% 141.42% at 0% 100%, #A0C9EC 8.87%, #D6E031 25.56%, #F04F23 77.99%);margin: 0 calc(var(--bs-gutter-x)* -0.5)"></div>
+          <div class="position-relative mt-2 mb-3 my-md-0">
+            <p class="mb-2">{{ 'general.contact.subtext_html' | t }}</p>
+            <h2 class="h1 mb-4 fw-bold" style="font-size:40px;font-weight:700">{{ page.title }}</h2>
+
+            <div class="pb-2 pb-md-3">
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2 mb-md-3">
+                  <div class="d-flex ratio ratio-1x1 rounded-circle bg-white bg-opacity-25 me-3" style="width: 2.5rem;">
+                    <i class="h4 ph ph-lightning m-auto position-relative w-auto"></i>
+                  </div>
+                  <p class="h6 m-0">Fast reaction</p>
+                </li>
+                <li class="d-flex align-items-center mb-2 mb-md-3">
+                  <div class="d-flex ratio ratio-1x1 rounded-circle bg-white bg-opacity-25 me-3" style="width: 2.5rem;">
+                    <i class="h4 ph ph-shield-check m-auto position-relative w-auto"></i>
+                  </div>
+                  <p class="h6 m-0">We know how to keep secrets</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card border-0 rounded-3 text-white" style="background: linear-gradient(252deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.16) 79.61%);">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-12 col-mb-6 mb-3 mb-md-4">
+                    <p class="mb-2">
+                      <small>Call:</small>
+                    </p>
+                    <a class="h6" href="#">877-959-6259</a>
+                  </div>
+                  <div class="col-12 col-mb-6 mb-3 mb-md-4">
+                    <p class="mb-2">
+                      <small>E-mail:</small>
+                    </p>
+                    <a class="h6" href="#">support@lumiway.com</a>
+                  </div>
+                </div>
+                <div class="mb-3 mb-md-4">
+                  <p class="mb-2">
+                    <small>Adress:</small>
+                  </p>
+                  <div class="h6">Doctor Beauty Inc. Park 80 West, 250 Pehle Ave, Suite 200, Saddle Brook, NJ, 07663</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="ps-md-5 py-4 py-md-0 my-2 my-md-0">
+          {% form 'contact' %}
+            {% if form.posted_successfully? %}
+              <div class="alert alert-success" role="alert">
+                Thank you for your contact
+              </div>
+            {% endif %}
+            {% include 'form-error'
+              , form: form %}
+
+            <h4 class="fw-bold mb-4">{{ 'general.contact.form_title' | t }}</h4>
+
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                id="ContactFormName"
+                name="contact[name]"
+                class="form-control border"
+                placeholder="Your Name" />
+              <label for="ContactFormName" class="form-label">Your Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                id="ContactFormEmail"
+                name="contact[email]"
+                class="form-control border"
+                placeholder="name@example.com" />
+              <label for="ContactFormEmail" class="form-label">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="tel"
+                id="ContactFormPhone"
+                name="contact[phone]"
+                class="form-control border"
+                placeholder="Phone number" />
+              <label for="ContactFormPhone" class="form-label">Phone number</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <textarea
+                id="ContactFormMessage"
+                name="contact[body]"
+                class="form-control border"
+                placeholder="Leave a message here"
+                style="height:128px"></textarea>
+              <label for="ContactFormMessage">Write your message...</label>
+            </div>
+
+            <div class="form-check py-2 mb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="ContactFormCheck"
+                checked>
+              <label class="form-check-label" for="ContactFormCheck">
+                I agree to the processing of personal data. Privacy Policy
+              </label>
+            </div>
+
+            <input
+              class="btn btn-primary w-100 text-start"
+              type="submit"
+              value="Send">
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

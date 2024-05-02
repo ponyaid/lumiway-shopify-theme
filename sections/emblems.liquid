@@ -1,0 +1,83 @@
+<section class="emblems pt-{{ section.settings.pt }} pb-{{ section.settings.pb }}" style="background: {{ section.settings.background }}">
+  <div class="container-fluid">
+    {% if section.settings.title.size > 0 %}
+      <div class="text-center text-uppercase fw-semibold mb-3">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="overflow-scroll">
+    <div class="d-flex justify-content-around align-items-center">
+      {%- for block in section.blocks -%}
+        <div class="col-4 col-md-1">
+          {% if block.settings.image %}
+            {{ block.settings.image | img_tag: "", "img-fluid" }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'img-fluid' }}
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+
+{%- schema -%}
+  {
+    "name": "emblems",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Emblems Title"
+      }, {
+        "type": "range",
+        "id": "pt",
+        "default": 3,
+        "min": 0,
+        "max": 5,
+        "label": "Padding Top"
+      }, {
+        "type": "range",
+        "id": "pb",
+        "default": 3,
+        "min": 0,
+        "max": 5,
+        "label": "Padding Bottom"
+      }, {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(180deg, #fff, #fff)"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Emblem",
+        "type": "emblem",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Icons",
+        "name": "Emblems Section",
+        "blocks": [
+          {
+            "type": "emblem"
+          }, {
+            "type": "emblem"
+          }, {
+            "type": "emblem"
+          }
+        ]
+      }
+    ]
+  }
+{%- endschema -%}

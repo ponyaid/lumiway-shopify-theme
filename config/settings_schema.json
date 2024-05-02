@@ -1,0 +1,86 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Lumiway template theme",
+    "theme_version": "1.0.0",
+    "theme_author": "Oleh Moskvychov",
+    "theme_documentation_url": "https:\/\/github.com\/Shopify\/themekit",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
+  },
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 300,
+        "step": 5,
+        "default": 165,
+        "unit": "px",
+        "label": "Logo Width"
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "Favicon"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "is_sticky",
+        "label": "Header is sticky",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading Font Styles"
+      },
+      {
+        "type": "font_picker",
+        "id": "header_text_font",
+        "label": "Font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "header",
+        "content": "Body Font Styles"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_text_font",
+        "label": "Font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "header",
+        "content": "Body Font Size"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "label": "Font Size",
+        "default": 16,
+        "unit": "px",
+        "min": 13,
+        "max": 25,
+        "step": 1
+      }
+    ]
+  }
+]

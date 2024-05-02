@@ -1,0 +1,236 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "button": {
+          "type": "button",
+          "settings": {
+            "url": "",
+            "label": "Button Label"
+          }
+        }
+      },
+      "block_order": [
+        "button"
+      ],
+      "settings": {
+        "title": "Hero Heading",
+        "subtitle": ""
+      }
+    },
+    "emblems": {
+      "type": "emblems",
+      "blocks": {
+        "emblem1": {
+          "type": "emblem",
+          "settings": {
+          }
+        },
+        "emblem2": {
+          "type": "emblem",
+          "settings": {
+          }
+        },
+        "emblem3": {
+          "type": "emblem",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "emblem1",
+        "emblem2",
+        "emblem3"
+      ],
+      "settings": {
+        "title": "",
+        "pt": 3,
+        "pb": 3,
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+      }
+    },
+    "benefits-section": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit1": {
+          "type": "benefit",
+          "settings": {
+            "url": "",
+            "text": "Benefit Label"
+          }
+        },
+        "benefit2": {
+          "type": "benefit",
+          "settings": {
+            "url": "",
+            "text": "Benefit Label"
+          }
+        },
+        "benefit3": {
+          "type": "benefit",
+          "settings": {
+            "url": "",
+            "text": "Benefit Label"
+          }
+        }
+      },
+      "block_order": [
+        "benefit1",
+        "benefit2",
+        "benefit3"
+      ],
+      "settings": {
+        "title": "Benefits Heading",
+        "subtitle": "",
+        "pt": 4,
+        "pb": 4,
+        "background": "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)"
+      }
+    },
+    "ticker": {
+      "type": "ticker",
+      "blocks": {
+        "ticker1": {
+          "type": "text",
+          "settings": {
+            "text": "Lumiway Theme Bootstrap"
+          }
+        },
+        "ticker2": {
+          "type": "text",
+          "settings": {
+            "text": "Lumiway Theme Bootstrap"
+          }
+        },
+        "ticker3": {
+          "type": "text",
+          "settings": {
+            "text": "Lumiway Theme Bootstrap"
+          }
+        }
+      },
+      "block_order": [
+        "ticker1",
+        "ticker2",
+        "ticker3"
+      ],
+      "settings": {
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "subtitle": "",
+        "collection": "all",
+        "products_to_show": 4
+      }
+    },
+    "content-section": {
+      "type": "content-section",
+      "settings": {
+        "title": "“a woman for <br>a woman”",
+        "text": "<p>We don't look at our website as a business, we look at it as a women's club where every woman can get support and understanding, all our products are things that solve the problems you are facing, we are a place where you are understood and supported, where women share their experiences. We are glad that we are together<\/p><hr><h5 class=\"text-uppercase\">Join over<\/h5><h2 class=\"fw-bold\" style=\"font-size:64px;\">350 000<\/h2><p>People who already live their best lives with Lumiway<\/p>"
+      }
+    },
+    "bestsellers-section": {
+      "type": "bestsellers-section",
+      "blocks": {
+        "product1": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product2": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product1",
+        "product2"
+      ],
+      "settings": {
+        "title": "Bestsellers Title",
+        "subtitle": ""
+      }
+    },
+    "banner": {
+      "type": "banner-section",
+      "settings": {
+        "title": "Banner Section Title",
+        "description": "",
+        "btn_url": "",
+        "btn_label": "Button Label"
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Blog posts",
+        "subtitle": "",
+        "blog": "news",
+        "post_limit": 3
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "question1": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        },
+        "question2": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        },
+        "question3": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        }
+      },
+      "block_order": [
+        "question1",
+        "question2",
+        "question3"
+      ],
+      "settings": {
+        "title": "Lumiway FAQs",
+        "description": "",
+        "btn_url": "",
+        "btn_label": "FAQ Label"
+      }
+    },
+    "feedback-section": {
+      "type": "feedback-section",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "emblems",
+    "benefits-section",
+    "ticker",
+    "featured-collection",
+    "content-section",
+    "bestsellers-section",
+    "banner",
+    "featured-blog",
+    "faq-section",
+    "feedback-section"
+  ]
+}

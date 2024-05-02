@@ -1,0 +1,129 @@
+<section class="bestsellers-section py-4 py-md-5">
+  <div class="container pt-md-2 pb-3 pb-md-4">
+    <div class="text-center mb-3 mb-md-5">
+      <h2 class="h1 fw-bold">{{ section.settings.title }}</h2>
+      {% if section.settings.subtitle != blank %}
+        <h6>{{ section.settings.subtitle }}</h6>
+      {% endif %}
+
+    </div>
+    <div class="row g-2 g-md-4">
+      {% for block in section.blocks %}
+        {%- assign product = all_products[block.settings.product] -%}
+        <div class="col-12 col-xl-6">
+          {% include 'product-card'
+            , product: product
+            , is_row: true %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container pb-md-2 pt-3 pt-md-4">
+    <div class="row g-4">
+      <div class="col-6 col-lg">
+        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+          <i
+            width="32"
+            height="32"
+            data-feather="refresh-ccw"></i>
+          <p class="h6 fw-bold m-0 text-center">30-Day Return Guarantee</p>
+        </div>
+
+      </div>
+      <div class="col-6 col-lg">
+        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+          <i
+            width="32"
+            height="32"
+            data-feather="star"></i>
+          <p class="h6 fw-bold m-0 text-center">Safe & Effective Ingredients</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg ">
+        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+          <i
+            width="32"
+            height="32"
+            data-feather="package"></i>
+          <p class="h6 fw-bold m-0 text-center">Fast & Discreet Shipping</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg">
+        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="33"
+            viewBox="0 0 32 33"
+            fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 4.02783H32V28.0278H0V4.02783Z"
+              fill="#E31D1C" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 6.02783V8.02783H32V6.02783H0ZM0 10.0278V12.0278H32V10.0278H0ZM0 16.0278V14.0278H32V16.0278H0ZM0 18.0278V20.0278H32V18.0278H0ZM0 24.0278V22.0278H32V24.0278H0ZM0 28.0278V26.0278H32V28.0278H0Z"
+              fill="#F7FCFF" />
+            <rect
+              y="4.02783"
+              width="18"
+              height="14"
+              fill="#2E42A5" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M2.08054 8.37533L3.14038 7.63707L3.9625 8.22893H3.49683L4.43816 9.06153L4.12022 10.2289H3.62224L3.13871 9.15674L2.72634 10.2289H1.49683L2.43816 11.0615L2.08035 12.3753L3.14019 11.6371L3.96231 12.2289H3.49683L4.43816 13.0615L4.12022 14.2289H3.62224L3.13871 13.1567L2.72634 14.2289H1.49683L2.43816 15.0615L2.08035 16.3753L3.14019 15.6371L4.16566 16.3753L3.84683 15.0615L4.67037 14.2289H4.29051L5.14019 13.6371L5.96231 14.2289H5.49683L6.43816 15.0615L6.08035 16.3753L7.14019 15.6371L8.16566 16.3753L7.84683 15.0615L8.67037 14.2289H8.29051L9.14019 13.6371L9.96231 14.2289H9.49683L10.4382 15.0615L10.0803 16.3753L11.1402 15.6371L12.1657 16.3753L11.8468 15.0615L12.6704 14.2289H12.2905L13.1402 13.6371L13.9623 14.2289H13.4968L14.4382 15.0615L14.0803 16.3753L15.1402 15.6371L16.1657 16.3753L15.8468 15.0615L16.6704 14.2289H15.6222L15.1387 13.1567L14.7263 14.2289H14.1301L13.8468 13.0615L14.6704 12.2289H14.2905L15.1402 11.6371L16.1657 12.3753L15.8468 11.0615L16.6704 10.2289H15.6222L15.1387 9.15674L14.7263 10.2289H14.1301L13.8468 9.06153L14.6704 8.22893H14.2905L15.1402 7.63707L16.1657 8.37533L15.8468 7.06153L16.6704 6.22893H15.6222L15.1387 5.15674L14.7263 6.22893H13.4968L14.4382 7.06153L14.1202 8.22893H13.6222L13.1387 7.15674L12.7263 8.22893H12.1301L11.8468 7.06153L12.6704 6.22893H11.6222L11.1387 5.15674L10.7263 6.22893H9.49683L10.4382 7.06153L10.1202 8.22893H9.62224L9.13871 7.15674L8.72634 8.22893H8.13013L7.84683 7.06153L8.67037 6.22893H7.62224L7.13871 5.15674L6.72634 6.22893H5.49683L6.43816 7.06153L6.12022 8.22893H5.62224L5.13871 7.15674L4.72634 8.22893H4.13033L3.84703 7.06153L4.67057 6.22893H3.62244L3.1389 5.15674L2.72653 6.22893H1.49702L2.43836 7.06153L2.08054 8.37533ZM14.1202 12.2289L14.4382 11.0615L13.4968 10.2289H13.9623L13.1402 9.63707L12.2905 10.2289H12.6704L11.8468 11.0615L12.1301 12.2289H12.7263L13.1387 11.1567L13.6222 12.2289H14.1202ZM11.9623 12.2289L11.1402 11.6371L10.2905 12.2289H10.6704L9.84683 13.0615L10.1301 14.2289H10.7263L11.1387 13.1567L11.6222 14.2289H12.1202L12.4382 13.0615L11.4968 12.2289H11.9623ZM8.43816 13.0615L8.12022 14.2289H7.62224L7.13871 13.1567L6.72634 14.2289H6.13013L5.84683 13.0615L6.67037 12.2289H6.29051L7.14019 11.6371L7.96231 12.2289H7.49683L8.43816 13.0615ZM8.72634 12.2289H8.13013L7.84683 11.0615L8.67037 10.2289H8.29051L9.14019 9.63707L9.96231 10.2289H9.49683L10.4382 11.0615L10.1202 12.2289H9.62224L9.13871 11.1567L8.72634 12.2289ZM6.12022 12.2289L6.43816 11.0615L5.49683 10.2289H5.96231L5.14019 9.63707L4.29051 10.2289H4.67037L3.84683 11.0615L4.13013 12.2289H4.72634L5.13871 11.1567L5.62224 12.2289H6.12022ZM12.4382 9.06153L12.1202 10.2289H11.6222L11.1387 9.15674L10.7263 10.2289H10.1301L9.84683 9.06153L10.6704 8.22893H10.2905L11.1402 7.63707L11.9623 8.22893H11.4968L12.4382 9.06153ZM7.96231 8.22893L7.14019 7.63707L6.29051 8.22893H6.67037L5.84683 9.06153L6.13013 10.2289H6.72634L7.13871 9.15674L7.62224 10.2289H8.12022L8.43816 9.06153L7.49683 8.22893H7.96231Z"
+              fill="#F7FCFF" />
+          </svg>
+          <p class="h6 fw-bold m-0 text-center">Manufactured In The USA</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "bestsellers-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Bestsellers Title",
+        "default": "Bestsellers Title"
+      }, {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Bestsellers Subtitle"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Product",
+        "type": "product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Content",
+        "name": "Best Sellers Section",
+        "blocks": [
+          {
+            "type": "product"
+          }, {
+            "type": "product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

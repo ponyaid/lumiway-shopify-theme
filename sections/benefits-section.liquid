@@ -1,0 +1,110 @@
+<section class="benefits pt-{{ section.settings.pt }} pb-{{ section.settings.pb }} py-md-5" style="background: {{ section.settings.background }}">
+  <div class="container pt-2">
+    <div class="text-center mb-3 mb-md-5">
+      <h2 class="h1 fw-bold">{{ section.settings.title }}</h2>
+      <div class="h6">{{ section.settings.subtitle }}</div>
+    </div>
+    <div class="d-flex flex-wrap gap-3 gap-md-5 justify-content-center">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.url }}" class="benefit position-relative">
+          {% if block.settings.label != blank %}
+            <div class="position-absolute py-1 px-2 end-0 top-2 rounded-pill z-1" style="background: radial-gradient(143.62% 141.42% at 0% 100%, #A0C9EC 8.87%, #D6E031 25.56%, #F04F23 77.99%)">
+              <span class="h6 text-white text-uppercase fst-italic m-0">{{ block.settings.label }}</span>
+            </div>
+          {% endif %}
+          <div class="benefit__img ratio ratio-1x1 mb-2 mb-md-3 rounded-circle overflow-hidden">
+            {% if block.settings.image %}
+              {{ block.settings.image | img_tag: '', "img-fluid object-fit-cover", 'x140' }}
+            {% else %}
+              {{ 'collection-1' | placeholder_svg_tag: 'img-fluid object-fit-cover' }}
+            {% endif %}
+          </div>
+          <p class="h6 fw-bold text-center">{{ block.settings.text }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "benefits-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Benefits Heading",
+        "default": "Benefits Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Benefits Subtitle"
+      },
+      {
+        "type": "range",
+        "id": "pt",
+        "default": 4,
+        "step": 1,
+        "min": 0,
+        "max": 5,
+        "label": "Padding Top"
+      },
+      {
+        "type": "range",
+        "id": "pb",
+        "default": 4,
+        "step": 1,
+        "min": 0,
+        "max": 5,
+        "label": "Padding Bottom"
+      }, {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Benefit",
+        "type": "benefit",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "url",
+            "id": "url",
+            "label": "URL"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Benefit Label"
+          }, {
+            "type": "text",
+            "id": "label",
+            "label": "Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Content",
+        "name": "Benefits Section",
+        "blocks": [
+          {
+            "type": "benefit"
+          }, {
+            "type": "benefit"
+          }, {
+            "type": "benefit"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

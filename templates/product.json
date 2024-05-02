@@ -1,0 +1,58 @@
+{
+    "sections": {
+        "main": {
+            "type": "main-product"
+        },
+        "emblems": {
+            "type": "emblems"
+        },
+        "ticker": {
+            "type": "ticker"
+        },
+        "list-collections": {
+            "type": "list-collections",
+            "blocks": {
+                "item1": {
+                    "type": "item"
+                },
+                "item2": {
+                    "type": "item"
+                },
+                "item3": {
+                    "type": "item"
+                }
+            },
+            "block_order": [
+                "item1",
+                "item2",
+                "item3"
+            ]
+        },
+        "faq-section": {
+            "type": "faq-section"
+        },
+        "bundle-section": {
+            "type": "bundle-section"
+        },
+        "featured-blog": {
+            "type": "featured-blog"
+        },
+        "related-products": {
+            "type": "related-products"
+        },
+        "feedback-section": {
+            "type": "feedback-section"
+        }
+    },
+    "order": [
+        "main",
+        "emblems",
+        "ticker",
+        "list-collections",
+        "faq-section",
+        "bundle-section",
+        "featured-blog",
+        "related-products",
+        "feedback-section"
+    ]
+}

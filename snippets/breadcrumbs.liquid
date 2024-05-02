@@ -1,0 +1,99 @@
+{% unless template == 'index' or template == 'list-collections' or template == '404' %}
+
+{% assign t = template | split: '.' | first  %}
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb flex-nowrap m-0">
+    
+    <li class="breadcrumb-item">
+        <a href="/" class="d-flex">
+            {%- render 'icon', icon: 'home' -%}
+        </a>
+    </li>
+
+    {% case t %}
+    {% when 'page' %}
+
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ page.title }}
+        </li>
+
+    {% when 'product' %}
+
+        {% if collection.url %}
+            <li class="breadcrumb-item">
+                <a href="{{ collection.url }}">{{ collection.title }}</a>
+            </li>
+        {% endif %}
+
+        <li class="breadcrumb-item active text-truncate" aria-current="page">
+            {{ product.title }}
+        </li>
+
+    {% when 'collection' and collection.handle %}
+
+        {% if current_tags %}
+            <li class="breadcrumb-item">
+                <a href="{{ collection.url }}">{{ collection.title }}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {% capture tag_url %}{{ collection.url }}/{{ current_tags | join: "+"}}{% endcapture %}
+                    {{ current_tags | join: " + "}}
+            </li>
+        {% else %}
+            <li class="breadcrumb-item active" aria-current="page">
+                {{ collection.title }}
+            </li>
+        {% endif %}
+    
+    {% when 'blog' %}
+
+        {% if current_tags %}
+            
+            <li class="breadcrumb-item">
+                <a href="{{ blog.url }}">{{ blog.title}}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {% capture tag_url %}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
+                {{ current_tags | join: " + " }}
+            </li>
+
+        {% else %}
+            <li class="breadcrumb-item active" aria-current="page">
+                {{ blog.title }}
+            </li>
+
+        {% endif %}
+    
+    {% when 'article' %}
+
+        <li class="breadcrumb-item">
+            <a href="{{ blog.url }}">{{ blog.title}}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ article.title }}
+        </li>
+
+    {% when 'cart' %}
+
+        <li class="breadcrumb-item">
+            <a href="/collections/all">All Products</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ page_title }}
+        </li>
+
+
+    {% else %}
+
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ page_title }}
+        </li>
+
+    {% endcase %}
+  </ol>
+</nav>
+
+
+{% endunless %}

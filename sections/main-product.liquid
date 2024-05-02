@@ -1,0 +1,454 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+<section class="pt-4 pb-3">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+  </div>
+</section>
+
+<section class="main-product mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-6 col-xl-5 col-lg-4 col-12 pe-xxl-5">
+        <div>
+          <div class="ratio ratio-1x1 mb-3">
+            <img
+              class="object-fit-cover"
+              src="{{ featured_image | img_url: 'large' }}"
+              alt="{{  featured_image.alt | escape  }}"
+              id="ProductMainImage">
+          </div>
+          <div class="main-product__thumbnails">
+            {% for image in product.images %}
+              <div class="ratio ratio-1x1 main-product__thumbnail" data-img-url="{{ image.src | img_url: 'large' }}">
+                <img
+                  src="{{ image.src | img_url: 'compact' }}"
+                  alt="{{ image.alt | escape }}"
+                  class="object-fit-cover">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <hr class="d-none d-md-block">
+        <div class="d-none d-md-block">
+          <div class="review-snippet">
+            <div class="card border-0">
+              <div class="card-header border-white">
+                <div class="d-flex justify-content-between flex-wrap">
+                  {{ 'trustpilot.png' | asset_url | img_tag: "trustpilot", "object-fit-contain review-snippet__trustpilot" }}
+                  <div class="text-muted">
+                    <small>Trustscore 4.6 | 10,000+ reviews</small>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="review-snippet__pic d-none d-xl-block">
+                    {{ 'product-4' | placeholder_svg_tag: 'w-100 h-100' }}
+                  </div>
+                  <div>
+                    <div class="d-flex gap-2 mb-2">
+                      <span class="fw-semibold" class="review-snippet__name">Hannah M.</span>
+                      <div>
+                        <svg
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none">
+                          <circle
+                            cx="8"
+                            cy="8.18652"
+                            r="8"
+                            fill="#6F6D77" />
+                          <path d="M12.4444 5.5199L6.88888 10.8532L3.55554 8.11035" stroke="white" />
+                        </svg>
+                        <span>Verified</span>
+                      </div>
+                    </div>
+                    <div>
+                      I was looking for effective sleep supplement for so long! Melatonin alone           
+                                            doesnt
+                                            help me at all.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-sm w-100 mt-3">read all</button>
+        </div>
+        <hr class="d-none d-md-block">
+
+        <div class="adv-snippet d-none d-xl-block">
+          <div class="card border-0">
+            {{ 'adv.jpg' | asset_url | img_tag: 'adv', class: 'card-img' }}
+            <div class="card-img-overlay d-flex p-4">
+              <div class="d-flex align-items-end w-100 mt-auto">
+                <div class="text-white col-md-5">
+                  <p class="mb-2 text-uppercase fw-semibold">Podacst</p>
+                  <div class="h5 m-0 card-title fw-bold">Why are probiotics so important for girls           
+                                        today?</div>
+                </div>
+                <div class="ms-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="88"
+                    height="88"
+                    viewBox="0 0 88 88"
+                    fill="none">
+                    <circle
+                      cx="44"
+                      cy="44"
+                      r="44"
+                      fill="#FFE5FA" />
+                    <path d="M56 44L38 54.3923L38 33.6077L56 44Z" fill="#211955" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-6 col-xl-7 col-lg-8 col-12 pt-3 pt-md-0">
+        <div class="d-flex gap-2 align-items-center mb-2">
+          {%- render 'icon'
+            , icon: 'stars' -%}
+          <small>
+            <strong>4.5</strong>
+            based on
+            <strong>1000+</strong>
+            Happy Women</small>
+        </div>
+        <h2 class="main-product__title fw-bold text-capitalize">{{ product.title }}</h2>
+        <p class="main-product__dsc">{{ product.description }}</p>
+        <ul class="list-unstyled row row-cols-2 g-2">
+          <li class="col d-flex">
+            {%- render 'icon'
+              , icon: 'product-benefit'
+              , class: 'me-2' -%}
+            <span>Improving Vaginal Health</span>
+          </li>
+          <li class="col d-flex">
+            {%- render 'icon'
+              , icon: 'product-benefit'
+              , class: 'me-2' -%}
+            <span>Protection against infections</span>
+          </li>
+          <li class="col d-flex">
+            {%- render 'icon'
+              , icon: 'product-benefit'
+              , class: 'me-2' -%}
+            <span>Normalization of microflora and pH</span>
+          </li>
+          <li class="col d-flex">
+            {%- render 'icon'
+              , icon: 'product-benefit'
+              , class: 'me-2' -%}
+            <span>Protecting from birth control</span>
+          </li>
+        </ul>
+        <div class="card border-0" style="background-color: #F9F9F9;">
+          <div class="card-body p-2 fw-medium">
+            <div class="d-flex gap-2">
+              <div class="my-auto">☝️</div>
+              <div>
+                <small class="text-uppercase">Recommended:</small>
+                <span class="d-inline-block">One capsules a day, 7 days a week</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="mb-3">
+          {% form 'product'
+            , product
+            , class: "product-form"
+            , id: "addToCartForm" %}
+            {% unless product.has_only_default_variant %}
+              <h5 class="mb-3 fw-bold" style="font-family: 'Archivo Expanded'">Choose your supply
+                <span style="color: #EB001B;">*</span>
+              </h5>
+              <fieldset class="bg-body-secondary p-2 rounded-2 mb-3">
+                <div class="row row-cols-1 row-cols-md-3 g-2">
+                  {% for variant in product.variants %}
+                    <div class="col product-variant">
+                      <input
+                        type="radio"
+                        id="main-product-{{ variant.id }}"
+                        style="display: none;"
+                        {% if forloop.first %}
+                        checked{% endif %}
+                        name="id"
+                        value="{{ variant.id }}">
+                      <label class="w-100 cursor-pointer" for="main-product-{{ variant.id }}">
+                        <div class="card">
+                          <div class="card-header text-center text-uppercase fw-semibold border border-white py-1 rounded-2 bg-body-secondary">
+                            {{ variant.metafields.custom.package_name }}
+                          </div>
+                          <div class="card-body d-flex flex-column">
+                            <div class="product-variant__metafields mb-3">
+                              <div>Expected result:</div>
+                              <div class="text-end text-md-start">
+                                {% assign expected_result = variant.metafields.custom.expected_result | strip %}
+                                <p class="fw-semibold m-0">{{ expected_result }}</p>
+                              </div>
+                              <div class="progress-stacked">
+                                <div class="progress" role="progressbar">
+                                  <div class="progress-bar"></div>
+                                </div>
+                                <div class="progress" role="progressbar">
+                                  <div class="progress-bar {% if expected_result == 'Min'
+                                                                    %}bg-secondary{% endif %}">
+</div>
+                                </div>
+                                <div class="progress" role="progressbar">
+                                  <div class="progress-bar {% if expected_result == 'Min'
+                                                                    or expected_result == 'Normal' %}bg-secondary{% endif
+                                                                    %}">
+</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row cols-2 g-3 mb-2 mb-md-0 order-first order-md-0">
+                              <div class="col">Enough:</div>
+                              <div class="col fw-semibold text-end text-md-start">
+                                {{ variant.title }} month</div>
+                            </div>
+                            <hr class="d-none d-md-block">
+                            <div class="d-flex flex-md-column">
+                              <ul class="list-unstyled m-0">
+                                {% assign benefit_list = variant.metafields.custom.benefit_list.value %}
+                                <li class="d-flex mb-1">
+                                  {% if benefit_list contains 'Fights Vaginal Odor' %}
+                                    {%- render 'icon'
+                                      , icon: 'check-mark'
+                                      , class: 'me-2' -%}
+                                  {% else %}
+                                    {%- render 'icon'
+                                      , icon: 'uncheck-mark'
+                                      , class: 'me-2' -%}
+                                  {% endif %}
+                                  Fights Vaginal Odor
+                                </li>
+                                <li class="d-flex mb-1">
+                                  {% if benefit_list contains 'Balances pH Levels' %}
+                                    {%- render 'icon'
+                                      , icon: 'check-mark'
+                                      , class: 'me-2' -%}
+                                  {% else %}
+                                    {%- render 'icon'
+                                      , icon: 'uncheck-mark'
+                                      , class: 'me-2' -%}
+                                  {% endif %}
+                                  Balances pH Levels
+                                </li>
+                                <li class="d-flex">
+                                  {% if benefit_list contains 'Eliminates Discharge' %}
+                                    {%- render 'icon'
+                                      , icon: 'check-mark'
+                                      , class: 'me-2' -%}
+                                  {% else %}
+                                    {%- render 'icon'
+                                      , icon: 'uncheck-mark'
+                                      , class: 'me-2' -%}
+                                  {% endif %}
+                                  Eliminates Discharge
+                                </li>
+                              </ul>
+                              <hr class="d-none d-md-block">
+                              <div class="ms-auto ms-md-0 text-end text-md-start">
+                                <div class="d-flex flex-column d-md-block">
+                                  <span class="product-variant__price order-1 order-md-0">{{
+variant.price | divided_by: variant.title | money }}</span>
+                                  <span class="text-muted">
+                                    <s>{{
+variant.compare_at_price | divided_by: variant.title | money }}</s>
+                                  </span>
+                                </div>
+                                <div class="product-variant__ft fw-semibold">
+                                  <small>Cost per           
+                                                                bottle</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  {% endfor %}
+                </div>
+              </fieldset>
+            {% endunless %}
+
+            <input
+              type="number"
+              id="Quantity"
+              name="quantity"
+              value="1"
+              min="1"
+              style="display: none;">
+
+            <div class="d-flex flex-column gap-2 mb-3">
+              <button
+                type="submit"
+                name="add"
+                id="AddToCart"
+                class="btn btn-lg w-100 btn-outline-secondary">
+                Add To Cart
+              </button>
+
+              {% if section.settings.dynamic_buttons_checkbox %}
+                {{ form | payment_button }}
+              {% endif %}
+            </div>
+
+            <div class="d-flex gap-2 justify-content-center">
+              {% for payment_type in shop.enabled_payment_types %}
+                <img src="{{ payment_type | payment_type_img_url }}">
+              {% endfor %}
+            </div>
+          {% endform %}
+        </div>
+        <div class="custom-accordion">
+          <div class="accordion" id="accordionDetails">
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent rounded-0 px-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne">
+                  Details
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionDetails">
+                <div class="accordion-body px-0">
+                  <ul class="m-0">
+                    <li>Supports balanced vaginal pH and healthy vaginalenvironment*</li>
+                    <li>Supports healthy levels of vaginal bacteria andyeast through the gut-vagina           
+                                            connection*</li>
+                    <li>Maintains urinary tract health*</li>
+                    <li>Made with 8 strains of good bacteria and is shelfstable*</li>
+                    <li>Made free of sugar (real or artificial), corn syrup,synthetic colors, and           
+                                            dyes because we don'tabelieve they belong in women's wellnesssupplements
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-transparent rounded-0 px-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  How to use
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionDetails">
+                <div class="accordion-body px-0">
+                  <strong>This is the second item's accordion body.</strong>
+                  It is hidden by default,           
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-transparent rounded-0 px-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                  Ingredients
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionDetails">
+                <div class="accordion-body px-0">
+                  <strong>This is the third item's accordion body.</strong>
+                  It is hidden by default,           
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the
+                  <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    const addToCartForm = document.getElementById('addToCartForm')
+    addToCartForm.addEventListener('submit', async e => {
+        e.preventDefault()
+
+            const obj = {
+                "items": [
+                    {
+                        "id": e.target.querySelector('input[name="id"]:checked').value,
+                        "quantity": document.querySelector('input[name="quantity"]').value
+                    }
+                ]
+            }
+
+            await addToCartFetch(obj)
+            const data = await getCartFetch()
+
+            updateCartBadge(data)
+            updateCartDrawer(data)
+            showCartDrawer()
+    })
+</script>
+
+
+<script>
+    (() => {
+        Array.from(document.querySelectorAll('.main-product__thumbnail')).forEach(thumbnail => {
+            thumbnail.addEventListener('click', e => {
+                document.querySelector('#ProductMainImage').src = e.currentTarget.dataset.imgUrl
+            })
+        })
+    })()
+</script>
+
+
+{% schema %}
+  {
+    "name": "Product Template",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "dynamic_buttons_checkbox",
+        "label": "Enable Dynamic Buttons",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}

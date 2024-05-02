@@ -1,0 +1,133 @@
+{
+  "current": {
+    "logo": "shopify:\/\/shop_images\/logo.png",
+    "logo_width": 165,
+    "body_text_font": "montserrat_n4",
+    "body_font_size": 14,
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "text": "Announcement Bar <strong>Text<\/strong>",
+          "is_visible": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "link_list_r49xGg": {
+            "type": "link_list",
+            "settings": {
+              "title": "Main menu",
+              "menu": "main-menu"
+            }
+          },
+          "link_list_9bkMQF": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick Links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "link_list_r49xGg",
+          "link_list_9bkMQF"
+        ],
+        "settings": {
+          "contacts": "",
+          "col_num": 3,
+          "enable_payment_type_icons": true,
+          "copyright": "Copyright © 2024 Lumiway. All rights reserved."
+        }
+      },
+      "benefits-section": {
+        "type": "benefits-section",
+        "blocks": {
+          "benefit_HpxgWm": {
+            "type": "benefit",
+            "settings": {
+              "url": "",
+              "text": "Vaginal Health"
+            }
+          },
+          "benefit_brkaan": {
+            "type": "benefit",
+            "settings": {
+              "url": "",
+              "text": "Benefit Label"
+            }
+          },
+          "benefit_79dKRJ": {
+            "type": "benefit",
+            "settings": {
+              "url": "",
+              "text": "Benefit Label"
+            }
+          }
+        },
+        "block_order": [
+          "benefit_HpxgWm",
+          "benefit_brkaan",
+          "benefit_79dKRJ"
+        ],
+        "settings": {
+          "title": "We're at every stage<br>Of your life",
+          "subtitle": "<p>Safer, more effective wellness products for your gut, brain & vagina<\/p>",
+          "pt": 4,
+          "pb": 4,
+          "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+        }
+      },
+      "emblems": {
+        "type": "emblems",
+        "blocks": {
+          "emblem_yFiePV": {
+            "type": "emblem",
+            "settings": {
+            }
+          },
+          "emblem_aQGh4N": {
+            "type": "emblem",
+            "settings": {
+            }
+          },
+          "emblem_bCBBWh": {
+            "type": "emblem",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "emblem_yFiePV",
+          "emblem_aQGh4N",
+          "emblem_bCBBWh"
+        ],
+        "settings": {
+          "title": "",
+          "pt": 3,
+          "pb": 3,
+          "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}

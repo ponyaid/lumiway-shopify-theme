@@ -1,0 +1,37 @@
+{% assign font_header = settings.header_text_font %}
+{% assign font_body = settings.body_text_font %}
+{% assign font_size = settings.body_font_size %}
+
+
+{{ font_header | font_face }}
+{{ font_body | font_face }}
+
+
+@font-face {
+    font-family: "Archivo Expanded";
+    src: url("{{ 'Archivo Expanded.woff2' | asset_url }}") format("woff2");
+}
+
+@font-face {
+    font-family: "Archivo Expanded";
+    src: url("{{ 'Archivo Expanded Bold.ttf' | asset_url }}") format("truetype");
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: {{ font_header.family }}, {{ font_header.fallback_families }};
+}
+
+.header {
+    font-family: {{ font_header.family }}, {{ font_header.fallback_families }};
+}
+
+body {
+    font-family: {{ font_body.family }}, {{ font_body.fallback_families }};
+    font-size: {{ font_size }}px;
+}
+
+
+h2 {
+    font-family: "Archivo Expanded";
+}

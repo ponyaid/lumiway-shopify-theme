@@ -1,0 +1,31 @@
+{%- if section.settings.is_visible -%}
+   <div class="announcement-bar py-2">
+      <div class="container">
+         <div class="d-flex align-items-center justify-content-center">
+            {%- render 'icon', icon: 'delivery', class: 'me-2' -%}
+            <span>{{ section.settings.text }}</span>
+         </div>
+      </div>
+   </div>
+{%- endif -%}
+
+
+{% schema %}
+{
+   "name": "Announcement Bar",
+   "settings": [
+    {
+       "type": "text",
+       "id": "text",
+       "label": "Bar Text",
+       "default": "Announcement Bar <strong>Text</strong>"
+    },
+    {
+       "type": "checkbox",
+       "id": "is_visible",
+       "label": "Bar is visible",
+       "default": true
+    }
+   ]
+}
+{% endschema %}

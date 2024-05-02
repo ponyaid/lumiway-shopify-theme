@@ -1,0 +1,73 @@
+<section class="py-4 py-md-5 position-relative {% if section.settings.text_white  %}text-white{% endif %}" style="background: {{ section.settings.background }}; font-size: 17px;">
+
+  <div class="position-absolute top-0 start 0 w-50 h-100 d-none d-lg-block">
+    {% if section.settings.image %}
+      {{ section.settings.image | img_tag: '', 'h-100 w-100 object-fit-contain', '955x' }}
+    {% else %}
+      {{ 'collection-1' | placeholder_svg_tag: 'h-100 w-100 object-fit-contain' }}
+    {% endif %}
+  </div>
+
+  <div class="container position-relative py-lg-4">
+    <div class="row">
+      <div class="col-12 col-lg-6 mb-4">
+        <div class="d-block d-lg-none">
+          {% if section.settings.image %}
+            {{ section.settings.image | img_tag: '', 'h-100 w-100 object-fit-contain', '955x' }}
+          {% else %}
+            {{ 'collection-1' | placeholder_svg_tag: 'h-100 w-100 object-fit-contain' }}
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <h2 class="h1 fw-bold text-end text-md-center mb-4 d-md-inline-block">
+          {{ section.settings.title }}
+        </h2>
+        <div class="ps-lg-5">
+          <div class="ps-lg-5">{{ section.settings.text }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "content-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Content Section Title",
+        "default": "Content Section Title"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label": "Content Section Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(180deg, #F0F9FE 0%, #F0F9FE 100%)"
+      }, {
+        "type": "checkbox",
+        "id": "text_white",
+        "label": "Text White",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "category": "Content",
+        "name": "Content Section"
+      }
+    ]
+  }
+{% endschema %}

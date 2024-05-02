@@ -1,0 +1,126 @@
+<section class="py-3">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+  </div>
+</section>
+
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 order-1 order-lg-0">
+        <div class="pe-lg-5">
+          <h1 class="fw-bold text-capitalize mb-4">{{ page.title }}</h1>
+          <div class="pt-3">
+            {{ page.content }}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        {{ 'about-pic.png' | asset_url | img_tag: "about", "img-fluid" }}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% section 'emblems' %}
+
+
+<section class="py-5 text-white about-values" style="background: radial-gradient(143.62% 141.42% at 0% 100%, #A0C9EC 8.87%, #D6E031 25.56%, #F04F23 77.99%);">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Our Values</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-xl-0">
+        <div class="card border-0 text-white h-100">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="mb-3">
+              <div class="d-flex ratio ratio-1x1 rounded-circle bg-white bg-opacity-25" style="width: 3.5rem;">
+                <i class="h2 ph ph-shield-check m-auto position-relative w-auto"></i>
+              </div>
+            </div>
+
+            <h4 class="card-title fw-bold mt-auto">Trust</h4>
+            <div class="card-text">
+              <p class="m-0">We are here to help you with taking better care of your health while making fully-informed and safe choices. whats more, we consider health issues prevention to be the best strategy and are going to open up new ways to your well-being.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-xl-0">
+        <div class="card border-0 text-white h-100">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="mb-3">
+              <div class="d-flex ratio ratio-1x1 rounded-circle bg-white bg-opacity-25" style="width: 3.5rem;">
+                <i class="h2 ph ph-shield-check m-auto position-relative w-auto"></i>
+              </div>
+            </div>
+
+            <h4 class="card-title fw-bold mt-auto">Emotional Stability</h4>
+            <div class="card-text">
+              <p class="m-0">We are here to help you with taking better care of your health while making fully-informed and safe choices. whats more, we consider health issues prevention to be the best strategy and are going to open up new ways to your well-being.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-xl-0">
+        <div class="card border-0 text-white h-100">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="mb-3">
+              <div class="d-flex ratio ratio-1x1 rounded-circle bg-white bg-opacity-25" style="width: 3.5rem;">
+                <i class="h2 ph ph-hand-heart m-auto position-relative w-auto"></i>
+              </div>
+            </div>
+
+            <h4 class="card-title fw-bold mt-auto">Gentle Care</h4>
+            <div class="card-text">
+              <p class="m-0">We are here to help you with taking better care of your health while making fully-informed and safe choices. whats more, we consider health issues prevention to be the best strategy and are going to open up new ways to your well-being.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-xl-0">
+        <div class="card border-0 text-white h-100">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="mb-3">
+              <div class="d-flex ratio ratio-1x1 rounded-circle bg-white bg-opacity-25" style="width: 3.5rem;">
+                <i class="h2 ph ph-moon-stars m-auto position-relative w-auto"></i>
+              </div>
+            </div>
+
+            <h4 class="card-title fw-bold mt-auto">Balance</h4>
+            <div class="card-text">
+              <p class="m-0">We are here to help you with taking better care of your health while making fully-informed and safe choices. whats more, we consider health issues prevention to be the best strategy and are going to open up new ways to your well-being.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container py-2">
+    <div class="row">
+      <div class="col-12 col-md-6 mb-4 mb-mb-0">
+        <div class="rounded-4 p-4 h-100" style="background: linear-gradient(90deg, #FFEFD5 0%, #D6E031 44.3%, #A0C9EC 100%)">
+          <div class="d-flex flex-column px-md-4 h-100">
+            <h2 class="fw-bold">Our Mission</h2>
+            <p class="mb-5">We are here to help you with taking better care of your health while making fully-informed and safe choices. whats more, we consider health issues prevention to be the best strategy and are going to open up new ways to your well-being.</p>
+            {{ 'mission-pic.png' | asset_url | img_tag: "mission", "img-fluid mt-auto" }}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="d-flex flex-column rounded-4 overflow-hidden h-100" style="background-color: #F0F9FE;">
+          {{ 'vision-pic.png' | asset_url | img_tag: "mission", "img-fluid" }}
+          <div class="p-4 mt-auto">
+            <div class="px-md-3">
+              <h2 class="fw-bold">Our Vison</h2>
+              <p>We are here to help you with taking better care of your health while making fully-informed and safe choices. whats more, we consider health issues prevention to be the best strategy and are going to open up new ways to your well-being.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
