@@ -64,9 +64,10 @@
         "benefit2": {
           "type": "benefit",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_4.png",
             "url": "",
             "text": "Benefit Label",
-            "label": ""
+            "label": "sale"
           }
         },
         "benefit3": {
@@ -222,6 +223,9 @@
     "feedback-section": {
       "type": "feedback-section",
       "settings": {
+        "title": "Questions?<br>Get in touchwith our wellness experts",
+        "phone_url": "",
+        "mail_url": ""
       }
     }
   },
