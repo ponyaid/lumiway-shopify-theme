@@ -224,7 +224,7 @@
       "type": "feedback-section",
       "settings": {
         "title": "Questions?<br>Get in touchwith our wellness experts",
-        "phone_url": "",
+        "phone_url": "tel:+17653753950",
         "mail_url": ""
       }
     }
