@@ -120,6 +120,13 @@ h5 {
     --bs-breadcrumb-item-active-color: #211955;
 }
 
+.form-check-input {
+    &:checked {
+        background-color: #010101;
+        border-color: #010101;
+    }
+}
+
 .announcement-bar {
     background-color: #F0F9FE;
 }

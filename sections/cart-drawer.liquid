@@ -1,83 +1,126 @@
-<div class="offcanvas offcanvas-end" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
-    <div class="offcanvas-header border-bottom">
-        <h5 class="offcanvas-title fw-bold" id="cartDrawerLabel">Your Cart</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="d-flex gap-1 align-items-center justify-content-center border-bottom py-2" 
-        style="padding-left: var(--bs-offcanvas-padding-x); padding-right: var(--bs-offcanvas-padding-x);">
-        {%- render 'icon', icon: 'stars' -%}
-        <small>Join <span class="fw-semibold">100 000+</span> Happy Women Club</small>
-    </div>
-    <div class="offcanvas-body p-0">
-        <div id="cart-drawer-tbody">
-            {% for item in cart.items %}
-                <div id="cart-drawer-{{ item.id }}" class="border-bottom" style="padding: var(--bs-offcanvas-padding-x) var(--bs-offcanvas-padding-y);">
-                    <div class="row g-2">
-                        <div class="col-3">
-                            <a href="{{ item.url | within: collections.all }}" class="ratio ratio-1x1">
-                                <img class="img-fluid rounded" src="{{ item | img_url: 'small' }}"
-                                    alt="{{ item.title | escape }}">
-                            </a>
-                        </div>
+<div
+  class="cart-drawer offcanvas offcanvas-end"
+  tabindex="-1"
+  id="cartDrawer"
+  aria-labelledby="cartDrawerLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title fw-bold" id="cartDrawerLabel">Your Cart</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+  </div>
+  <div class="d-flex gap-1 align-items-center justify-content-center border-bottom py-2" style="padding-left: var(--bs-offcanvas-padding-x); padding-right: var(--bs-offcanvas-padding-x);">
+    {%- render 'icon'
+      , icon: 'stars' -%}
+    <small>Join
+      <span class="fw-semibold">100 000+</span>
+      Happy Women Club</small>
+  </div>
 
-                        <div class="col">
-                            <div class="d-flex align-items-lg-start">
-                                <a class="h6 m-0" href="{{ item.url }}">{{ item.product.title }}</a>
-                                <button data-key="{{ item.id }}" class="btn p-0 ms-auto text-muted btn-delete">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                        <path fill-rule="evenodd"
-                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <p class="text-muted mb-2">{{ item.variant.title }}</p>
-                            <div class="d-flex">
-                                <span class="text-muted">Every 3 month</span>
-                                <div class="ms-auto">
-                                    {% if item.original_line_price != item.line_price %}
-                                        <span>{{ item.original_line_price | money }}</span>
-                                    {% endif %}
-                                    <span class="fw-semibold">{{ item.price | money }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <div class="offcanvas-body p-0">
+    <div class="cart-drawer__empty h-100 d-flex {% if cart.item_count != 0 %}visually-hidden{% endif %}">
+      <div class="text-center m-auto p-4">
+        <i class="ph ph-shopping-cart-simple h2 text-muted mb-3"></i>
+        <h6 class="text-muted fw-semibold mb-4">
+          Your Shopping Cart<br>is Empty
+        </h6>
+        <button
+          class="btn btn-primary"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          Continue shopping
+        </button>
+      </div>
+    </div>
+
+    <div id="cart-drawer-tbody">
+      {% for item in cart.items %}
+        <div
+          id="cart-drawer-{{ item.id }}"
+          class="border-bottom"
+          style="padding: var(--bs-offcanvas-padding-x) var(--bs-offcanvas-padding-y);">
+          <div class="row g-2">
+            <div class="col-3">
+              <a href="{{ item.url | within: collections.all }}" class="ratio ratio-1x1">
+                <img
+                  class="img-fluid rounded"
+                  src="{{ item | img_url: 'small' }}"
+                  alt="{{ item.title | escape }}">
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="d-flex align-items-lg-start">
+                <a class="h6 m-0" href="{{ item.url }}">{{ item.product.title }}</a>
+                <button data-key="{{ item.id }}" class="btn p-0 ms-auto text-muted btn-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                  </svg>
+                </button>
+              </div>
+              <p class="text-muted mb-2">{{ item.variant.title }}</p>
+              <div class="d-flex">
+                <span class="text-muted">Every 3 month</span>
+                <div class="ms-auto">
+                  {% if item.original_line_price != item.line_price %}
+                    <span>{{ item.original_line_price | money }}</span>
+                  {% endif %}
+                  <span class="fw-semibold">{{ item.price | money }}</span>
                 </div>
-            {% endfor %}
+              </div>
+            </div>
+          </div>
         </div>
+      {% endfor %}
     </div>
+  </div>
 
+  <div class="cart-drawer__footer {% if cart.item_count == 0 %}visually-hidden{% endif %}">
     <div class="border-top py-2" style="padding-right: var(--bs-offcanvas-padding-x); padding-left: var(--bs-offcanvas-padding-x);">
-        <div class="d-flex align-items-center">
-            <div>
-                <p class="h6 m-0">Order Protection</p>
-                <small class="text-muted">Protection for Damage, Loss, Theft & Morel</small>
-            </div>
-            <div class="form-check form-switch form-check-reverse ms-auto mb-0">
-                <label class="h6 form-check-label m-0" for="ProtectionSwitch">$1.99</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="ProtectionSwitch" checked>
-            </div>
+      <div class="d-flex align-items-center">
+        <div>
+          <p class="h6 m-0">Order Protection</p>
+          <small class="text-muted">Protection for Damage, Loss, Theft & Morel</small>
         </div>
+        <div class="form-check form-switch form-check-reverse ms-auto mb-0">
+          <label class="h6 form-check-label m-0" for="ProtectionSwitch">$1.99</label>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="ProtectionSwitch"
+            checked>
+        </div>
+      </div>
     </div>
 
     <div class="d-flex flex-column border-top" style="padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);">
-        <div class="mb-4">
-            <div class="d-flex mb-2">
-                <div class="text-muted">Total Saving:</div>
-            </div>
-            <div class="d-flex">
-                <div class="text-muted">Subtotal (<span id="cart-drawer-items-badge">{{ cart.item_count }}</span> items):</div>
-                <div class="ms-auto fw-semibold" id="cart-drawer-total-price">{{ cart.total_price | money }}</div>
-            </div>
+      <div class="mb-4">
+        <div class="d-flex mb-2">
+          <div class="text-muted">Total Saving:</div>
         </div>
-        <form action="/cart" method="post">
-            <button type="submit" class="btn btn-primary w-100" name="checkout">
-                Checkout
-            </button>
-        </form>
+        <div class="d-flex">
+          <div class="text-muted">Subtotal (<span id="cart-drawer-items-badge">{{ cart.item_count }}</span>
+            items):</div>
+          <div class="ms-auto fw-semibold" id="cart-drawer-total-price">{{ cart.total_price | money }}</div>
+        </div>
+      </div>
+      <form action="/cart" method="post">
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          name="checkout">
+          Checkout
+        </button>
+      </form>
     </div>
-
+  </div>
 </div>
