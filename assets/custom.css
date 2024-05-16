@@ -3,6 +3,7 @@
   --bs-body-color: #010101;
   --bs-secondary-bg-rgb: 239, 238, 243;
   --bs-secondary-color: rgba(33, 25, 85, 0.50);
+  --bs-primary-rgb: 242, 98, 50 ;
 }
 
 body {
@@ -114,8 +115,21 @@ h5 {
 }
 
 .breadcrumb {
-  color: rgba(33, 25, 85, 0.6);
-  --bs-breadcrumb-item-active-color: #211955;
+  --bs-breadcrumb-divider-color: inherit;
+  --bs-breadcrumb-item-active-color: #8D8D8D;
+}
+
+.pagination {
+  --bs-pagination-border-width: 0px;
+  --bs-pagination-padding-y: 0;
+  --bs-pagination-padding-x: 1.25rem;
+  --bs-pagination-disabled-bg: transparent;
+  --bs-pagination-color: var(--bs-body-color);
+  --bs-pagination-bg: transparent;
+  --bs-pagination-hover-bg: transparent;
+  --bs-pagination-focus-bg: transparent;
+  --bs-link-hover-color: var(--bs-body-color);
+  --bs-pagination-border-radius: 0;
 }
 
 .form-check-input:checked {
@@ -520,12 +534,56 @@ input:checked + label .product-variant__price, input:checked + label .product-va
   max-height: 1000px;
 }
 
-.featured-blog .card-text {
+.featured-collection .slick-track {
+  display: flex;
+}
+
+.article-card .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.article blockquote {
+  position: relative;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: 1.25rem;
+}
+.article blockquote:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, #FFEFD5, #D6E031, #A0C9EC);
+}
+.article blockquote * {
+  margin: 0;
+}
+
+.main-blog__hero {
+  min-height: 370px;
+}
+@media (max-width: 767px) {
+  .main-blog__hero {
+    min-height: 348px;
+  }
+}
+.main-blog__hero .breadcrumb {
+  --bs-breadcrumb-item-active-color: inherit;
+}
+.main-blog__hero .nav-item a {
+  display: block;
+  padding: 0.5rem 1rem;
 }
 
 /*# sourceMappingURL=custom.css.map */

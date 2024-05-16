@@ -10,7 +10,7 @@
   <div class="container py-2">
     <div class="featured-collection__items">
       {% for product in collections[section.settings.collection].products limit: section.settings.products_to_show %}
-        <div class="card border-0 mx-2">
+        <div class="mx-2 h-auto">
           {% include 'product-card'
             , product: product %}
         </div>

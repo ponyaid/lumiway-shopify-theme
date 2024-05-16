@@ -1,6 +1,6 @@
-<footer class="py-5 bg-white border-top">
+<footer class="pt-3 pt-md-5 pb-3 bg-white border-top">
   <div class="container-fluid container-md">
-    <div class="row pb-5">
+    <div class="row pt-4 pb-3 pb-md-5">
       <div class="col-12 col-md-4">
         <a class="d-block mb-4 mb-md-5" href="/">
           {%- if settings.logo != blank -%}
@@ -39,13 +39,13 @@
       </div>
     </div>
     <hr>
-    <div class="row g-3 row-cols-1 row-cols-md-3 pt-3">
+    <div class="row g-3 row-cols-1 row-cols-md-3 py-3">
       <div class="col"></div>
       <div class="col order-last order-md-0 text-center">
         <small class="opacity-50">{{ section.settings.copyright }}</small>
       </div>
       <div class="col">
-        <div class="d-flex flex-wrap gap-2 mb-2 justify-content-center justify-content-md-end">
+        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-end">
           {% if section.settings.enable_payment_type_icons %}
             {% for payment_type in shop.enabled_payment_types %}
               <img src="{{ payment_type | payment_type_img_url }}">
