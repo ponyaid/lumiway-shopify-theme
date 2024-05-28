@@ -1,86 +1,88 @@
 <section class="hero overflow-hidden position-relative">
-    <div class="container mb-4 mb-md-0">
-        <div class="col-md-6 col-xl-5 col-xxl-4 text-center text-md-start">
-            <div class="d-inline-block py-1 px-2 rounded-pill bg-white mb-3" style="--bs-bg-opacity: .5">
-                <div class="d-flex flex-wrap gap-1 align-items-center justify-content-center">
-                    {%- render 'icon', icon: 'stars' -%}
-                    <small><strong>4.5</strong> based on <strong>1000+</strong> Happy Women</small>
-                </div>
-            </div>
-            <h1 class="fw-bold">{{ section.settings.title }}</h1>
-            <div class="hero__dsc">{{ section.settings.subtitle }}</div>
-            <div class="pt-3">
-                {% for block in section.blocks  %}
-                    {% if forloop.first %}
-                        <a href="{{ block.settings.url }}" class="btn btn-primary mr-2">{{ block.settings.label }}</a>
-                    {% else %}
-                        <a href="{{ block.settings.url }}" class="btn">{{ block.settings.label }}</a>
-                    {% endif %}
-                {% endfor %}
-            </div>
+  <div class="container mb-4 mb-md-0">
+    <div class="col-md-6 col-xl-5 col-xxl-4 text-center text-md-start">
+      <div class="d-inline-block py-1 px-2 rounded-pill bg-white mb-3" style="--bs-bg-opacity: .5">
+        <div class="d-flex flex-wrap gap-1 align-items-center justify-content-center">
+          {%- render 'icon'
+            , icon: 'stars' -%}
+          <small>
+            <strong>4.5</strong>
+            based on
+            <strong>1000+</strong>
+            Happy Women</small>
         </div>
+      </div>
+      <h1 class="fw-bold">{{ section.settings.title }}</h1>
+      <div class="hero__dsc">{{ section.settings.subtitle }}</div>
+      <div class="pt-3">
+        {% for block in section.blocks %}
+          {% if forloop.first %}
+            <a href="{{ block.settings.url }}" class="btn btn-primary mr-2">{{ block.settings.label }}</a>
+          {% else %}
+            <a href="{{ block.settings.url }}" class="btn">{{ block.settings.label }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-    <div class="hero__img h-100 text-center">
-        {% if section.settings.image %}
-        <img src="{{ section.settings.image | img_url: 'large' }}" class="h-100">
-        {% else %}
-        {{ 'lifestyle-1' | placeholder_svg_tag: 'h-100' }}
-        {% endif %}
-    </div>
+  </div>
+  <div class="hero__img h-100 text-center">
+    {% if section.settings.image %}
+      <img src="{{ section.settings.image | img_url: 'large' }}" class="h-100">
+    {% else %}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'h-100' }}
+    {% endif %}
+  </div>
 </section>
 
 
 {% schema %}
-    {
-        "name": "hero",
+  {
+    "name": "hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Hero Title",
+        "default": "Hero Heading"
+      }, {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Hero Subtitle"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "max_blocks": 2,
+    "blocks": [
+      {
+        "name": "Button",
+        "type": "button",
         "settings": [
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Hero Title",
-                "default": "Hero Heading"
-            },
-            {
-                "type": "richtext",
-                "id": "subtitle",
-                "label": "Hero Subtitle"
-            },
-            {
-                "type": "image_picker",
-                "id": "image",
-                "label": "Image"
-            }
-        ],
-        "max_blocks": 2,
-        "blocks": [
-            {
-                "name": "Button",
-                "type": "button",
-                "settings": [
-                     {
-                        "type": "url",
-                        "id": "url",
-                        "label": "Button URL"
-                    },
-                    {
-                        "type": "text",
-                        "id": "label",
-                        "label": "Button Label",
-                        "default": "Button Label"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "category": "Hero",
-                "name": "Main Hero",
-                "blocks": [
-                    {
-                        "type": "button"
-                    }
-                ]
-            }
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Button URL"
+          }, {
+            "type": "text",
+            "id": "label",
+            "label": "Button Label",
+            "default": "Button Label"
+          }
         ]
-    }
+      }
+    ],
+    "presets": [
+      {
+        "category": "Hero",
+        "name": "Main Hero",
+        "blocks": [
+          {
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}

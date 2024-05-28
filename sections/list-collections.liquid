@@ -1,34 +1,29 @@
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-4">
-      <h2 class="h1 fw-bold text-capitalize">{{ section.settings.heading }}</h2>
-      <h5>{{ section.settings.description }}</h5>
-    </div>
-    <div class="row justify-content-center g-1 g-md-3 mb-4">
-      {% for block in section.blocks %}
-        <div class="list-collections__item col-12 col-md-4 col-xl-2">
-          <div class="card h-100 position-relative overflow-hidden">
-            {{ 'product-apparel-1' | placeholder_svg_tag: 'bottom-0 end-0 h-100 object-fit-cover position-absolute start-0 top-0 w-100' }}
-            <div class="card-body d-flex flex-column position-relative">
-              <h5 class="card-title fw-bold mb-3 mt-md-auto">{{ block.settings.heading }}</h5>
-              <div class="card-text">{{ block.settings.description }}</div>
-              <a class="btn btn-sm p-0 d-none" href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="d-flex flex-column align-items-center">
-      <a class="btn btn-outline-secondary mb-2" href="#">Read all reviews</a>
-      <div class="d-flex gap-1 align-items-center">
-        {%- render 'icon'
-          , icon: 'stars' -%}
-        <small>
-          <strong>4.5</strong>
-          based on
-          <strong>1000+</strong>
-          Happy Women</small>
+<section class="list-collections pt-{{ section.settings.pt }} pb-{{ section.settings.pb }} py-md-5" style="background: {{ section.settings.background }}">
+  <div class="container pt-2">
+    {% if section.settings.title != blank or section.settings.subtitle != blank %}
+      <div class="text-center mb-3 mb-md-5">
+        <h2 class="h1 fw-bold">{{ section.settings.title }}</h2>
+        <div class="h6">{{ section.settings.subtitle }}</div>
       </div>
+    {% endif %}
+    <div class="d-flex flex-wrap gap-3 gap-md-5 justify-content-center">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.url }}" class="list-collections__collection position-relative">
+          {% if block.settings.label != blank %}
+            <div class="position-absolute py-1 px-2 end-0 top-2 rounded-pill z-1" style="background: radial-gradient(143.62% 141.42% at 0% 100%, #A0C9EC 8.87%, #D6E031 25.56%, #F04F23 77.99%)">
+              <span class="h6 text-white text-uppercase fst-italic m-0">{{ block.settings.label }}</span>
+            </div>
+          {% endif %}
+          <div class="list-collections__collection-img ratio ratio-1x1 mb-2 mb-md-3 rounded-circle overflow-hidden">
+            {% if block.settings.image %}
+              {{ block.settings.image | img_tag: '', "img-fluid object-fit-cover", 'x140' }}
+            {% else %}
+              {{ 'collection-1' | placeholder_svg_tag: 'img-fluid object-fit-cover' }}
+            {% endif %}
+          </div>
+          <p class="h6 fw-bold text-center">{{ block.settings.text }}</p>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -38,35 +33,62 @@
     "name": "list-collections",
     "settings": [
       {
-        "type": "inline_richtext",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Block Heading"
-      }, {
+        "type": "text",
+        "id": "title",
+        "label": "List Collections Heading",
+        "default": "List Collections Heading"
+      },
+      {
         "type": "richtext",
-        "id": "description",
-        "label": "Description"
+        "id": "subtitle",
+        "label": "List Collections Subtitle"
+      },
+      {
+        "type": "range",
+        "id": "pt",
+        "default": 4,
+        "step": 1,
+        "min": 0,
+        "max": 5,
+        "label": "Padding Top"
+      },
+      {
+        "type": "range",
+        "id": "pb",
+        "default": 4,
+        "step": 1,
+        "min": 0,
+        "max": 5,
+        "label": "Padding Bottom"
+      }, {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)"
       }
     ],
     "blocks": [
       {
-        "name": "Item",
-        "type": "item",
+        "name": "Collection",
+        "type": "collection",
         "settings": [
           {
             "type": "image_picker",
             "id": "image",
             "label": "Image"
           }, {
-            "type": "inline_richtext",
-            "id": "heading",
-            "label": "Heading",
-            "default": "Item Heading"
+            "type": "url",
+            "id": "url",
+            "label": "URL"
           }, {
-            "type": "richtext",
-            "id": "description",
-            "label": "Description",
-            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?</p>"
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Collection Label"
+          }, {
+            "type": "text",
+            "id": "label",
+            "label": "Label"
           }
         ]
       }
@@ -77,11 +99,11 @@
         "name": "List Collections",
         "blocks": [
           {
-            "type": "item"
+            "type": "collection"
           }, {
-            "type": "item"
+            "type": "collection"
           }, {
-            "type": "item"
+            "type": "collection"
           }
         ]
       }

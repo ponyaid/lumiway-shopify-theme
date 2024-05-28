@@ -54,14 +54,16 @@
     </div>
   </section>
 
-  <section class="py-4 border-top">
-    <div class="container pt-2 pt-md-3">
-      <div class="d-flex justify-content-center">
-        {% render 'pagination'
-          , paginate: paginate %}
+  {% if paginate.pages > 1 %}
+    <section class="py-4 border-top">
+      <div class="container pt-2 pt-md-3">
+        <div class="d-flex justify-content-center">
+          {% render 'pagination'
+            , paginate: paginate %}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
 
 {% endpaginate %}
 

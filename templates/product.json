@@ -9,30 +9,30 @@
         "ticker": {
             "type": "ticker"
         },
-        "list-collections": {
-            "type": "list-collections",
+        "benefits-section": {
+            "type": "benefits-section",
             "blocks": {
-                "item1": {
-                    "type": "item"
+                "benefit1": {
+                    "type": "benefit"
                 },
-                "item2": {
-                    "type": "item"
+                "benefit2": {
+                    "type": "benefit"
                 },
-                "item3": {
-                    "type": "item"
+                "benefit3": {
+                    "type": "benefit"
                 }
             },
             "block_order": [
-                "item1",
-                "item2",
-                "item3"
+                "benefit1",
+                "benefit2",
+                "benefit3"
             ]
         },
         "faq-section": {
             "type": "faq-section"
         },
-        "bundle-section": {
-            "type": "bundle-section"
+        "complementary-products": {
+            "type": "complementary-products"
         },
         "featured-blog": {
             "type": "featured-blog"
@@ -48,9 +48,9 @@
         "main",
         "emblems",
         "ticker",
-        "list-collections",
+        "benefits-section",
         "faq-section",
-        "bundle-section",
+        "complementary-products",
         "featured-blog",
         "related-products",
         "feedback-section"

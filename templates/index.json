@@ -50,42 +50,42 @@
         "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
       }
     },
-    "benefits-section": {
-      "type": "benefits-section",
+    "list-collections": {
+      "type": "list-collections",
       "blocks": {
-        "benefit1": {
-          "type": "benefit",
+        "collection1": {
+          "type": "collection",
           "settings": {
             "url": "",
-            "text": "Benefit Label",
+            "text": "Collection Label",
             "label": ""
           }
         },
-        "benefit2": {
-          "type": "benefit",
+        "collection2": {
+          "type": "collection",
           "settings": {
             "image": "shopify:\/\/shop_images\/Frame_4.png",
             "url": "",
-            "text": "Benefit Label",
+            "text": "Collection Label",
             "label": "sale"
           }
         },
-        "benefit3": {
-          "type": "benefit",
+        "collection3": {
+          "type": "collection",
           "settings": {
             "url": "",
-            "text": "Benefit Label",
+            "text": "Collection Label",
             "label": ""
           }
         }
       },
       "block_order": [
-        "benefit1",
-        "benefit2",
-        "benefit3"
+        "collection1",
+        "collection2",
+        "collection3"
       ],
       "settings": {
-        "title": "Benefits Heading",
+        "title": "Collections Heading",
         "subtitle": "",
         "pt": 4,
         "pb": 4,
@@ -232,7 +232,7 @@
   "order": [
     "hero",
     "emblems",
-    "benefits-section",
+    "list-collections",
     "ticker",
     "featured-collection",
     "content-section",

@@ -108,6 +108,23 @@ h5 {
     --bs-gradient: none;
 }
 
+.btn-outline-light {
+    --bs-btn-color: #f8f9fa;
+    --bs-btn-border-color: #f8f9fa;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #f8f9fa;
+    --bs-btn-hover-border-color: #f8f9fa;
+    --bs-btn-focus-shadow-rgb: 248, 249, 250;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #f8f9fa;
+    --bs-btn-active-border-color: #f8f9fa;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #f8f9fa;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #f8f9fa;
+    --bs-gradient: none;
+}
+
 .badge {
     --bs-badge-color: var(--bs-body-color);
     --bs-badge-padding-x: 10px;
@@ -353,7 +370,7 @@ h5 {
 }
 
 
-.list-collections {
+.benefits {
     &__item {
         .card-body {
             @media (min-width: 768px) {
@@ -413,7 +430,7 @@ h5 {
     }
 }
 
-.bundles {
+.complementary-products {
     .form-check-input:checked {
         background-color: #00C2AE;
         border-color: #00C2AE;
@@ -455,11 +472,8 @@ h5 {
     }
 }
 
-.benefit {
-    width: 140px;
-    font-family: "Archivo Expanded";
-
-    &__img {
+.list-collections {
+    &__collection-img {
         &::after {
             content: "";
             display: block;
@@ -481,15 +495,19 @@ h5 {
         }
     }
 
-    &:hover {
-        color: #F25929;
-        text-decoration: underline;
+    &__collection {
+        width: 140px;
+        font-family: "Archivo Expanded";
+
+        &:hover {
+            color: #F25929;
+            text-decoration: underline;
+        }
     }
 
-    &:hover &__img::after {
+    &__collection:hover &__collection-img::after {
         opacity: 1;
     }
-
 }
 
 .product-card {
@@ -674,4 +692,8 @@ h5 {
             padding: .5rem 1rem;
         }
     }
+}
+
+.main-collection-banner {
+    min-height: 254px;
 }

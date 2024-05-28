@@ -36,6 +36,9 @@
 
           {% if current_tags %}
             <li class="breadcrumb-item text-truncate">
+              <a href="{{ routes.collections_url }}">Collections</a>
+            </li>
+            <li class="breadcrumb-item text-truncate">
               <a href="{{ collection.url }}">{{ collection.title }}</a>
             </li>
             <li class="breadcrumb-item text-truncate active" aria-current="page">
@@ -43,6 +46,9 @@
               {{ current_tags | join: " + " }}
             </li>
           {% else %}
+            <li class="breadcrumb-item text-truncate">
+              <a href="{{ routes.collections_url }}">Collections</a>
+            </li>
             <li class="breadcrumb-item text-truncate active" aria-current="page">
               {{ collection.title }}
             </li>
