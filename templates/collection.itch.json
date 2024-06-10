@@ -74,7 +74,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "product_card_is_row": false
+        "product_card_is_row": true
       }
     },
     "1718022855b17f672c": {
