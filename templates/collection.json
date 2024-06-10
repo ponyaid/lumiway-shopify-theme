@@ -77,6 +77,22 @@
         "product_card_is_row": false
       }
     },
+    "1718022855b17f672c": {
+      "type": "apps",
+      "blocks": {
+        "archive_detect_ugc_collection_feed_CWFXa8": {
+          "type": "shopify:\/\/apps\/archive-detect-ugc\/blocks\/collection_feed\/3bf10f27-2525-4f37-94f5-dedb92556f19",
+          "settings": {
+            "feedId": ""
+          }
+        }
+      },
+      "block_order": [
+        "archive_detect_ugc_collection_feed_CWFXa8"
+      ],
+      "settings": {
+      }
+    },
     "faq-section": {
       "type": "faq-section",
       "blocks": {
@@ -127,6 +143,7 @@
     "banner",
     "list-collections",
     "product-grid",
+    "1718022855b17f672c",
     "faq-section",
     "feedback-section"
   ]
