@@ -64,14 +64,6 @@
     "list-collections": {
       "type": "list-collections",
       "blocks": {
-        "collection_AXbCMh": {
-          "type": "collection",
-          "settings": {
-            "url": "shopify:\/\/collections\/vaginal-health",
-            "text": "Collection Label",
-            "label": ""
-          }
-        },
         "collection1": {
           "type": "collection",
           "settings": {
@@ -119,7 +111,6 @@
         }
       },
       "block_order": [
-        "collection_AXbCMh",
         "collection1",
         "collection2",
         "collection3",
