@@ -228,7 +228,7 @@
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
-        "title": "Blog posts",
+        "title": "The \u2028Lumiway Blog",
         "subtitle": "",
         "blog": "news",
         "post_limit": 3
