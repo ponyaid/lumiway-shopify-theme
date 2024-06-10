@@ -10,6 +10,15 @@
     "list-collections": {
       "type": "list-collections",
       "blocks": {
+        "collection_NHRTHf": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_10663.png",
+            "url": "shopify:\/\/collections\/shop-all-products",
+            "text": "Shop All",
+            "label": ""
+          }
+        },
         "collection1": {
           "type": "collection",
           "settings": {
@@ -36,32 +45,13 @@
             "text": "Mental Health",
             "label": "Sale"
           }
-        },
-        "collection_pyPF3U": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
-            "url": "",
-            "text": "Period",
-            "label": ""
-          }
-        },
-        "collection_a3kd3R": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_747.png",
-            "url": "",
-            "text": "Climax & Menopause",
-            "label": ""
-          }
         }
       },
       "block_order": [
+        "collection_NHRTHf",
         "collection1",
         "collection2",
-        "collection3",
-        "collection_pyPF3U",
-        "collection_a3kd3R"
+        "collection3"
       ],
       "settings": {
         "title": "",
