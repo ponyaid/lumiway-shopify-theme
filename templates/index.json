@@ -199,16 +199,16 @@
             "product": "the-secret-to-all-day-your-v-freshness-with-feminine-fresh"
           }
         },
-        "product2": {
+        "product_bHJQz6": {
           "type": "product",
           "settings": {
-            "product": "test-product"
+            "product": "menopause-am-capsules"
           }
         }
       },
       "block_order": [
         "product1",
-        "product2"
+        "product_bHJQz6"
       ],
       "settings": {
         "title": "Best Sellers of the Month",
