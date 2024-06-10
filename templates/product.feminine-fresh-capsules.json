@@ -222,9 +222,9 @@
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
-        "title": "Blog posts",
-        "subtitle": "",
-        "blog": "",
+        "title": "The \u2028Lumiway Blog",
+        "subtitle": "<p>Learn about CBD use cases, latest research findings, and valuable tips on CBD consumption in our blog articles.<\/p>",
+        "blog": "news",
         "post_limit": 3
       }
     },
