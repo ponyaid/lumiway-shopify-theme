@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo.png",
+    "logo": "shopify:\/\/shop_images\/Group.png",
     "logo_width": 165,
     "body_text_font": "montserrat_n4",
     "body_font_size": 14,
@@ -53,22 +53,16 @@
           "benefit_HpxgWm": {
             "type": "benefit",
             "settings": {
-              "url": "",
-              "text": "Vaginal Health"
             }
           },
           "benefit_brkaan": {
             "type": "benefit",
             "settings": {
-              "url": "",
-              "text": "Benefit Label"
             }
           },
           "benefit_79dKRJ": {
             "type": "benefit",
             "settings": {
-              "url": "",
-              "text": "Benefit Label"
             }
           }
         },
@@ -78,11 +72,6 @@
           "benefit_79dKRJ"
         ],
         "settings": {
-          "title": "We're at every stage<br>Of your life",
-          "subtitle": "<p>Safer, more effective wellness products for your gut, brain & vagina<\/p>",
-          "pt": 4,
-          "pb": 4,
-          "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
         }
       },
       "cart-drawer": {

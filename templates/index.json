@@ -16,29 +16,40 @@
       ],
       "settings": {
         "title": "Hero Heading",
-        "subtitle": ""
+        "subtitle": "",
+        "image": "shopify:\/\/shop_images\/2024-01-25___22_1.png"
       }
     },
     "emblems": {
       "type": "emblems",
       "blocks": {
+        "emblem_9VpkUc": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harpers-Bazaar-logo-500x281.png"
+          }
+        },
         "emblem1": {
           "type": "emblem",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Cosmopolitan-logo-500x281.png"
           }
         },
         "emblem2": {
           "type": "emblem",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Womens-Health-logo-500x281.png"
           }
         },
         "emblem3": {
           "type": "emblem",
           "settings": {
+            "image": "shopify:\/\/shop_images\/VOGUE_revista_-_logo.png"
           }
         }
       },
       "block_order": [
+        "emblem_9VpkUc",
         "emblem1",
         "emblem2",
         "emblem3"
@@ -136,7 +147,7 @@
       "settings": {
         "title": "“a woman for <br>a woman”",
         "text": "<p>We don't look at our website as a business, we look at it as a women's club where every woman can get support and understanding, all our products are things that solve the problems you are facing, we are a place where you are understood and supported, where women share their experiences. We are glad that we are together<\/p><hr><h5 class=\"text-uppercase\">Join over<\/h5><h2 class=\"fw-bold\" style=\"font-size:64px;\">350 000<\/h2><p>People who already live their best lives with Lumiway<\/p>",
-        "background": "linear-gradient(180deg, #F0F9FE 0%, #F0F9FE 100%)",
+        "background": "linear-gradient(180deg, rgba(240, 249, 254, 1), rgba(240, 249, 254, 1) 100%)",
         "text_white": false
       }
     },
