@@ -225,6 +225,23 @@
         "post_limit": 3
       }
     },
+    "1718015076b9811758": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_Jx4QNF": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_Jx4QNF"
+      ],
+      "settings": {
+      }
+    },
     "faq-section": {
       "type": "faq-section",
       "blocks": {
@@ -281,6 +298,7 @@
     "bestsellers-section",
     "banner",
     "featured-blog",
+    "1718015076b9811758",
     "faq-section",
     "feedback-section"
   ]

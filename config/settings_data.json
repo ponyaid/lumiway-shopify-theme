@@ -2,6 +2,7 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/Group.png",
     "logo_width": 165,
+    "is_sticky": true,
     "body_text_font": "montserrat_n4",
     "body_font_size": 14,
     "sections": {
@@ -124,7 +125,16 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
