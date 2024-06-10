@@ -108,34 +108,10 @@
             "heading": "Hot flashes and night sweats",
             "description": "<p>Are those unexpected heat waves, like the whole world is on fire and slamming into you at the most unexpected moment, keeping you from feeling like yourself?<\/p>"
           }
-        },
-        "benefit1": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Benefit Heading",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
-          }
-        },
-        "benefit2": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Benefit Heading",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
-          }
-        },
-        "benefit3": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Benefit Heading",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
-          }
         }
       },
       "block_order": [
-        "benefit_AgbbyG",
-        "benefit1",
-        "benefit2",
-        "benefit3"
+        "benefit_AgbbyG"
       ],
       "settings": {
         "heading": "Block Heading",
