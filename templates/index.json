@@ -181,6 +181,22 @@
         "text_white": false
       }
     },
+    "17180210421f084071": {
+      "type": "apps",
+      "blocks": {
+        "archive_detect_ugc_feed_Jx8UnL": {
+          "type": "shopify:\/\/apps\/archive-detect-ugc\/blocks\/feed\/3bf10f27-2525-4f37-94f5-dedb92556f19",
+          "settings": {
+            "feedId": ""
+          }
+        }
+      },
+      "block_order": [
+        "archive_detect_ugc_feed_Jx8UnL"
+      ],
+      "settings": {
+      }
+    },
     "bestsellers-section": {
       "type": "bestsellers-section",
       "blocks": {
@@ -295,6 +311,7 @@
     "ticker",
     "featured-collection",
     "content-section",
+    "17180210421f084071",
     "bestsellers-section",
     "banner",
     "featured-blog",
