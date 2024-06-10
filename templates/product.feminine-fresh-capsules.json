@@ -138,10 +138,38 @@
     },
     "faq-section": {
       "type": "faq-section",
+      "blocks": {
+        "question_pfCHtC": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_eEkjcD": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_yqNYGa": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_pfCHtC",
+        "question_eEkjcD",
+        "question_yqNYGa"
+      ],
       "settings": {
         "title": "Lumiway FAQs",
-        "description": "",
-        "btn_url": "",
+        "description": "<p>If you need more information or help choosing the right product, our 24\/7 care girls would love to hear from you and help you find the right product and recommended amount to will make you shine!<\/p>",
+        "btn_url": "shopify:\/\/pages\/contact",
         "btn_label": "I have a question"
       }
     },
