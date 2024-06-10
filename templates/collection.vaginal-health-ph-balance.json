@@ -36,12 +36,22 @@
             "text": "Itch",
             "label": ""
           }
+        },
+        "collection_wgYxAj": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_749.png",
+            "url": "shopify:\/\/collections\/odor",
+            "text": "Odor",
+            "label": ""
+          }
         }
       },
       "block_order": [
         "collection1",
         "collection2",
-        "collection_RC6QTP"
+        "collection_RC6QTP",
+        "collection_wgYxAj"
       ],
       "settings": {
         "title": "",
