@@ -104,8 +104,9 @@
         "benefit_AgbbyG": {
           "type": "benefit",
           "settings": {
-            "heading": "Benefit Heading",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+            "image": "shopify:\/\/shop_images\/Frame_48098609.png",
+            "heading": "Hot flashes and night sweats",
+            "description": "<p>Are those unexpected heat waves, like the whole world is on fire and slamming into you at the most unexpected moment, keeping you from feeling like yourself?<\/p>"
           }
         },
         "benefit1": {
