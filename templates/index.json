@@ -211,17 +211,18 @@
         "product2"
       ],
       "settings": {
-        "title": "Bestsellers Title",
-        "subtitle": ""
+        "title": "Best Sellers of the Month",
+        "subtitle": "This month, our girls chose these products"
       }
     },
     "banner": {
       "type": "banner-section",
       "settings": {
-        "title": "Banner Section Title",
-        "description": "",
+        "title": "Find Your Wellness Routine",
+        "description": "Discover which products are right for you and build a routine with safer, more effective wellness products for your gut, brain & vagina.",
         "btn_url": "",
-        "btn_label": "Button Label"
+        "btn_label": "Button Label",
+        "img": "shopify:\/\/shop_images\/Group_10634.png"
       }
     },
     "featured-blog": {
