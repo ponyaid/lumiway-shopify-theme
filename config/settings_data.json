@@ -2,6 +2,7 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/Group.png",
     "logo_width": 165,
+    "is_sticky": true,
     "body_text_font": "montserrat_n4",
     "body_font_size": 14,
     "sections": {
