@@ -15,8 +15,8 @@
         "button"
       ],
       "settings": {
-        "title": "Hero Heading",
-        "subtitle": "",
+        "title": "Find Your  Wellness Routine",
+        "subtitle": "<p>Discover which products are right for you and build a routine with safer, more effective wellness products for your gut, brain & vagina.<\/p>",
         "image": "shopify:\/\/shop_images\/2024-01-25___22_1.png"
       }
     },
@@ -67,25 +67,45 @@
         "collection1": {
           "type": "collection",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
             "url": "",
-            "text": "Collection Label",
+            "text": "Vaginal Health",
             "label": ""
           }
         },
         "collection2": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_4.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
             "url": "",
-            "text": "Collection Label",
+            "text": "Weight Loss \u2028& Detox",
             "label": "sale"
           }
         },
         "collection3": {
           "type": "collection",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
             "url": "",
-            "text": "Collection Label",
+            "text": "Mental Health",
+            "label": ""
+          }
+        },
+        "collection_WKHm7k": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
+            "url": "",
+            "text": "Period",
+            "label": ""
+          }
+        },
+        "collection_k7JQn3": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_747.png",
+            "url": "",
+            "text": "Climax & Menopause",
             "label": ""
           }
         }
@@ -93,11 +113,13 @@
       "block_order": [
         "collection1",
         "collection2",
-        "collection3"
+        "collection3",
+        "collection_WKHm7k",
+        "collection_k7JQn3"
       ],
       "settings": {
-        "title": "Collections Heading",
-        "subtitle": "",
+        "title": "Women’s wellness\u2028for every body",
+        "subtitle": "<p>Safer, more effective wellness products for your gut, brain & vagina<\/p>",
         "pt": 4,
         "pb": 4,
         "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
