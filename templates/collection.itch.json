@@ -10,39 +10,12 @@
     "list-collections": {
       "type": "list-collections",
       "blocks": {
-        "collection1": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
-            "url": "",
-            "text": "Vaginal Health",
-            "label": ""
-          }
-        },
-        "collection2": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
-            "url": "",
-            "text": "Weight Loss \u2028& Detox",
-            "label": ""
-          }
-        },
-        "collection3": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
-            "url": "",
-            "text": "Mental Health",
-            "label": "Sale"
-          }
-        },
         "collection_pyPF3U": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
-            "url": "",
-            "text": "Period",
+            "image": "shopify:\/\/shop_images\/Group_10663.png",
+            "url": "shopify:\/\/collections\/vaginal-health",
+            "text": "Vaginal Health",
             "label": ""
           }
         },
@@ -57,9 +30,6 @@
         }
       },
       "block_order": [
-        "collection1",
-        "collection2",
-        "collection3",
         "collection_pyPF3U",
         "collection_a3kd3R"
       ],
