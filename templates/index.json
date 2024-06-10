@@ -6,7 +6,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "url": "",
+            "url": "shopify:\/\/collections\/shop-all-products",
             "label": "Button Label"
           }
         }
@@ -202,7 +202,7 @@
         "product2": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "test-product"
           }
         }
       },
