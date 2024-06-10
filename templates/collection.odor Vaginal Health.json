@@ -13,8 +13,8 @@
         "collection1": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Group_10663.png",
+            "url": "shopify:\/\/collections\/vaginal-health",
             "text": "Vaginal Health",
             "label": ""
           }
@@ -22,36 +22,27 @@
         "collection2": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_745_c215ab91-ba33-4de6-b7ad-2b4956208ed7.png",
             "url": "",
-            "text": "Weight Loss \u2028& Detox",
+            "text": "Odor",
             "label": ""
           }
         },
-        "collection3": {
+        "collection_Gnig6F": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
-            "url": "",
-            "text": "Mental Health",
-            "label": "Sale"
-          }
-        },
-        "collection_pyPF3U": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
-            "url": "",
-            "text": "Period",
+            "image": "shopify:\/\/shop_images\/Ellipse_750.png",
+            "url": "shopify:\/\/collections\/itch",
+            "text": "Itch",
             "label": ""
           }
         },
-        "collection_a3kd3R": {
+        "collection_BjtHJH": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_747.png",
-            "url": "",
-            "text": "Climax & Menopause",
+            "image": "shopify:\/\/shop_images\/Ellipse_748.png",
+            "url": "shopify:\/\/collections\/ph-balance",
+            "text": "pH Balance",
             "label": ""
           }
         }
@@ -59,9 +50,8 @@
       "block_order": [
         "collection1",
         "collection2",
-        "collection3",
-        "collection_pyPF3U",
-        "collection_a3kd3R"
+        "collection_Gnig6F",
+        "collection_BjtHJH"
       ],
       "settings": {
         "title": "",
@@ -74,7 +64,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "product_card_is_row": false
+        "product_card_is_row": true
       }
     },
     "1718022855b17f672c": {
