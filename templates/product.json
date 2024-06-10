@@ -1,58 +1,106 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-product"
-        },
-        "emblems": {
-            "type": "emblems"
-        },
-        "ticker": {
-            "type": "ticker"
-        },
-        "list-collections": {
-            "type": "list-collections",
-            "blocks": {
-                "item1": {
-                    "type": "item"
-                },
-                "item2": {
-                    "type": "item"
-                },
-                "item3": {
-                    "type": "item"
-                }
-            },
-            "block_order": [
-                "item1",
-                "item2",
-                "item3"
-            ]
-        },
-        "faq-section": {
-            "type": "faq-section"
-        },
-        "bundle-section": {
-            "type": "bundle-section"
-        },
-        "featured-blog": {
-            "type": "featured-blog"
-        },
-        "related-products": {
-            "type": "related-products"
-        },
-        "feedback-section": {
-            "type": "feedback-section"
-        }
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "dynamic_buttons_checkbox": false
+      }
     },
-    "order": [
-        "main",
-        "emblems",
-        "ticker",
-        "list-collections",
-        "faq-section",
-        "bundle-section",
-        "featured-blog",
-        "related-products",
-        "feedback-section"
-    ]
+    "emblems": {
+      "type": "emblems",
+      "settings": {
+        "title": "",
+        "pt": 3,
+        "pb": 3,
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+      }
+    },
+    "ticker": {
+      "type": "ticker",
+      "settings": {
+      }
+    },
+    "list-collections": {
+      "type": "list-collections",
+      "blocks": {
+        "item1": {
+          "type": "item",
+          "settings": {
+            "heading": "Item Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
+        "item2": {
+          "type": "item",
+          "settings": {
+            "heading": "Item Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
+        "item3": {
+          "type": "item",
+          "settings": {
+            "heading": "Item Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item1",
+        "item2",
+        "item3"
+      ],
+      "settings": {
+        "heading": "Block Heading",
+        "description": ""
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "settings": {
+        "title": "Lumiway FAQs",
+        "description": "",
+        "btn_url": "",
+        "btn_label": "I have a question"
+      }
+    },
+    "bundle-section": {
+      "type": "bundle-section",
+      "settings": {
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Blog posts",
+        "subtitle": "",
+        "blog": "",
+        "post_limit": 3
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+      }
+    },
+    "feedback-section": {
+      "type": "feedback-section",
+      "settings": {
+        "title": "Questions?<br>Get in touchwith our wellness experts",
+        "phone_url": "",
+        "mail_url": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "emblems",
+    "ticker",
+    "list-collections",
+    "faq-section",
+    "bundle-section",
+    "featured-blog",
+    "related-products",
+    "feedback-section"
+  ]
 }
