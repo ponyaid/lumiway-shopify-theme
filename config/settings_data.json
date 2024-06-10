@@ -8,7 +8,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text": "Announcement Bar <strong>Text<\/strong>",
+          "text": "<strong>Fast & Secure Shipping<\/strong>",
           "is_visible": true
         }
       },
