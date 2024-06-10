@@ -67,7 +67,7 @@
         "collection1": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_743_d49a59c8-5842-40db-a8a3-60c324fe0a8a.png",
             "url": "shopify:\/\/collections\/vaginal-health",
             "text": "Vaginal Health",
             "label": ""
@@ -76,8 +76,8 @@
         "collection2": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Ellipse_744_ba176650-a956-440f-9c17-196a58da7a2b.png",
+            "url": "shopify:\/\/collections\/weight-loss-detox",
             "text": "Weight Loss \u2028& Detox",
             "label": "sale"
           }
@@ -85,8 +85,8 @@
         "collection3": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Ellipse_745_78cb2b10-19da-4706-b73d-ebc1bd86c38e.png",
+            "url": "shopify:\/\/collections\/mental-health",
             "text": "Mental Health",
             "label": ""
           }
