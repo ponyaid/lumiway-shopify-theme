@@ -21,6 +21,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "link_list_gWTMzh": {
+            "type": "link_list",
+            "settings": {
+              "title": "Solution for You",
+              "menu": "solutions-for-you"
+            }
+          },
           "link_list_r49xGg": {
             "type": "link_list",
             "settings": {
@@ -37,6 +44,7 @@
           }
         },
         "block_order": [
+          "link_list_gWTMzh",
           "link_list_r49xGg",
           "link_list_9bkMQF"
         ],
