@@ -1,111 +1,133 @@
 {
-    "sections": {
-        "banner": {
-            "type": "main-collection-banner",
-            "settings": {
-                "show_collection_description": true,
-                "show_collection_image": true
-            }
-        },
-        "list-collections": {
-            "type": "list-collections",
-            "blocks": {
-                "collection1": {
-                    "type": "collection",
-                    "settings": {
-                        "url": "",
-                        "text": "Collection Label",
-                        "label": ""
-                    }
-                },
-                "collection2": {
-                    "type": "collection",
-                    "settings": {
-                        "image": "shopify:\/\/shop_images\/Frame_4.png",
-                        "url": "",
-                        "text": "Collection Label",
-                        "label": "sale"
-                    }
-                },
-                "collection3": {
-                    "type": "collection",
-                    "settings": {
-                        "url": "",
-                        "text": "Collection Label",
-                        "label": ""
-                    }
-                }
-            },
-            "block_order": [
-                "collection1",
-                "collection2",
-                "collection3"
-            ],
-            "settings": {
-                "title": "",
-                "subtitle": "",
-                "pt": 4,
-                "pb": 4,
-                "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
-            }
-        },
-        "product-grid": {
-            "type": "main-collection-product-grid",
-            "settings": {
-                "product_card_is_row": false
-            }
-        },
-        "faq-section": {
-            "type": "faq-section",
-            "blocks": {
-                "question1": {
-                    "type": "question",
-                    "settings": {
-                        "question": "Default Question",
-                        "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
-                    }
-                },
-                "question2": {
-                    "type": "question",
-                    "settings": {
-                        "question": "Default Question",
-                        "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
-                    }
-                },
-                "question3": {
-                    "type": "question",
-                    "settings": {
-                        "question": "Default Question",
-                        "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
-                    }
-                }
-            },
-            "block_order": [
-                "question1",
-                "question2",
-                "question3"
-            ],
-            "settings": {
-                "title": "Lumiway FAQs",
-                "description": "<p>If you need more information or help choosing the right product, our 24\/7 care <strong>girls<\/strong> would love to hear from you and <strong>help you<\/strong> find the right product and recommended amount to <strong>will make you shine<\/strong>!<\/p>",
-                "btn_url": "",
-                "btn_label": "I have a question"
-            }
-        },
-        "feedback-section": {
-            "type": "feedback-section",
-            "settings": {
-                "title": "Questions?<br>Get in touchwith our wellness experts",
-                "phone_url": "tel:+17653753950",
-                "mail_url": ""
-            }
-        }
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true
+      }
     },
-    "order": [
-        "banner",
-        "list-collections",
-        "product-grid",
-        "faq-section",
-        "feedback-section"
-    ]
+    "list-collections": {
+      "type": "list-collections",
+      "blocks": {
+        "collection1": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
+            "url": "",
+            "text": "Vaginal Health",
+            "label": ""
+          }
+        },
+        "collection2": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
+            "url": "",
+            "text": "Weight Loss \u2028& Detox",
+            "label": ""
+          }
+        },
+        "collection3": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
+            "url": "",
+            "text": "Mental Health",
+            "label": "Sale"
+          }
+        },
+        "collection_pyPF3U": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
+            "url": "",
+            "text": "Period",
+            "label": ""
+          }
+        },
+        "collection_a3kd3R": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_747.png",
+            "url": "",
+            "text": "Climax & Menopause",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection1",
+        "collection2",
+        "collection3",
+        "collection_pyPF3U",
+        "collection_a3kd3R"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "pt": 4,
+        "pb": 4,
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "product_card_is_row": false
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "question1": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        },
+        "question2": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        },
+        "question3": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        }
+      },
+      "block_order": [
+        "question1",
+        "question2",
+        "question3"
+      ],
+      "settings": {
+        "title": "Lumiway FAQs",
+        "description": "<p>If you need more information or help choosing the right product, our 24\/7 care <strong>girls<\/strong> would love to hear from you and <strong>help you<\/strong> find the right product and recommended amount to <strong>will make you shine<\/strong>!<\/p>",
+        "btn_url": "",
+        "btn_label": "I have a question"
+      }
+    },
+    "feedback-section": {
+      "type": "feedback-section",
+      "settings": {
+        "title": "Questions?<br>Get in touchwith our wellness experts",
+        "phone_url": "tel:+17653753950",
+        "mail_url": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "list-collections",
+    "product-grid",
+    "faq-section",
+    "feedback-section"
+  ]
 }
