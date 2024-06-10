@@ -158,8 +158,8 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "subtitle": "",
+        "title": "Shop Our Best Seller",
+        "subtitle": "Short Description",
         "collection": "all",
         "products_to_show": 4
       }
@@ -169,6 +169,7 @@
       "settings": {
         "title": "“a woman for <br>a woman”",
         "text": "<p>We don't look at our website as a business, we look at it as a women's club where every woman can get support and understanding, all our products are things that solve the problems you are facing, we are a place where you are understood and supported, where women share their experiences. We are glad that we are together<\/p><hr><h5 class=\"text-uppercase\">Join over<\/h5><h2 class=\"fw-bold\" style=\"font-size:64px;\">350 000<\/h2><p>People who already live their best lives with Lumiway<\/p>",
+        "image": "shopify:\/\/shop_images\/a_woman_for_a_woman_2x_1.png",
         "background": "linear-gradient(180deg, rgba(240, 249, 254, 1), rgba(240, 249, 254, 1) 100%)",
         "text_white": false
       }
