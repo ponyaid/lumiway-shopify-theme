@@ -109,6 +109,14 @@
             "description": "<p>Are those unexpected heat waves, like the whole world is on fire and slamming into you at the most unexpected moment, keeping you from feeling like yourself?<\/p>"
           }
         },
+        "benefit_9QJCtb": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a_woman_for_a_woman_2x_1.png",
+            "heading": "Benefit Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
         "benefit_RHXMXr": {
           "type": "benefit",
           "settings": {
@@ -120,6 +128,7 @@
       },
       "block_order": [
         "benefit_AgbbyG",
+        "benefit_9QJCtb",
         "benefit_RHXMXr"
       ],
       "settings": {
