@@ -8,11 +8,43 @@
     },
     "emblems": {
       "type": "emblems",
+      "blocks": {
+        "emblem_NXdChb": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harpers-Bazaar-logo-500x281.png"
+          }
+        },
+        "emblem_npJT4j": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cosmopolitan-logo-500x281.png"
+          }
+        },
+        "emblem_JgAR4b": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Womens-Health-logo-500x281.png"
+          }
+        },
+        "emblem_xzkPK7": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VOGUE_revista_-_logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "emblem_NXdChb",
+        "emblem_npJT4j",
+        "emblem_JgAR4b",
+        "emblem_xzkPK7"
+      ],
       "settings": {
-        "title": "",
+        "title": "fetured in",
         "pt": 3,
         "pb": 3,
-        "background": "linear-gradient(180deg, #fff, #fff)"
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
       }
     },
     "ticker": {
