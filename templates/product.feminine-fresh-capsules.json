@@ -49,6 +49,52 @@
     },
     "ticker": {
       "type": "ticker",
+      "blocks": {
+        "text_qn6hhH": {
+          "type": "text",
+          "settings": {
+            "text": "Reduces Risk of BV\/UTI Infection and Dryness"
+          }
+        },
+        "text_H4pngJ": {
+          "type": "text",
+          "settings": {
+            "text": "Enhanced Digestive Health"
+          }
+        },
+        "text_HF6Kmx": {
+          "type": "text",
+          "settings": {
+            "text": "Maintains Vaginal pH Balance"
+          }
+        },
+        "text_h3gABp": {
+          "type": "text",
+          "settings": {
+            "text": "Boosts Immune System"
+          }
+        },
+        "text_FgTUay": {
+          "type": "text",
+          "settings": {
+            "text": "Reduces Bloating and Gas"
+          }
+        },
+        "text_FCHdQT": {
+          "type": "text",
+          "settings": {
+            "text": "Prevents Vaginal Odor and Yeast Infections"
+          }
+        }
+      },
+      "block_order": [
+        "text_qn6hhH",
+        "text_H4pngJ",
+        "text_HF6Kmx",
+        "text_h3gABp",
+        "text_FgTUay",
+        "text_FCHdQT"
+      ],
       "settings": {
       }
     },
