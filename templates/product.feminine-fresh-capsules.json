@@ -142,21 +142,42 @@
         "question_pfCHtC": {
           "type": "question",
           "settings": {
-            "question": "Default Question",
+            "question": "What are women’s probiotics and how do they work?",
             "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
           }
         },
         "question_eEkjcD": {
           "type": "question",
           "settings": {
-            "question": "Default Question",
+            "question": "What are the benefits of women’s probiotics?",
             "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
           }
         },
         "question_yqNYGa": {
           "type": "question",
           "settings": {
-            "question": "Default Question",
+            "question": "Can probiotics help with yeast infection?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_8ELNtJ": {
+          "type": "question",
+          "settings": {
+            "question": "How often should women’s probiotics be taken?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_dDm7Yi": {
+          "type": "question",
+          "settings": {
+            "question": "Can probiotics be combined with other supplements or medication?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_XhC9c3": {
+          "type": "question",
+          "settings": {
+            "question": "How we make shipping?",
             "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
           }
         }
@@ -164,7 +185,10 @@
       "block_order": [
         "question_pfCHtC",
         "question_eEkjcD",
-        "question_yqNYGa"
+        "question_yqNYGa",
+        "question_8ELNtJ",
+        "question_dDm7Yi",
+        "question_XhC9c3"
       ],
       "settings": {
         "title": "Lumiway FAQs",
