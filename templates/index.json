@@ -16,7 +16,8 @@
       ],
       "settings": {
         "title": "Find Your  Wellness Routine",
-        "subtitle": "<p>Discover which products are right for you and build a routine with safer, more effective wellness products for your gut, brain & vagina.<\/p>"
+        "subtitle": "<p>Discover which products are right for you and build a routine with safer, more effective wellness products for your gut, brain & vagina.<\/p>",
+        "image": "shopify:\/\/shop_images\/2024-01-25___22_1.png"
       }
     },
     "emblems": {
@@ -37,13 +38,21 @@
         "emblem3": {
           "type": "emblem",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Cosmopolitan-logo-500x281.png"
+          }
+        },
+        "emblem_DULzCd": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harpers-Bazaar-logo-500x281.png"
           }
         }
       },
       "block_order": [
         "emblem1",
         "emblem2",
-        "emblem3"
+        "emblem3",
+        "emblem_DULzCd"
       ],
       "settings": {
         "title": "",
@@ -200,10 +209,11 @@
     "banner": {
       "type": "banner-section",
       "settings": {
-        "title": "Banner Section Title",
-        "description": "",
+        "title": "Find Your Wellness Routine",
+        "description": "Discover which products are right for you and build a routine with safer, more effective wellness products for your gut, brain & vagina.",
         "btn_url": "",
-        "btn_label": "Button Label"
+        "btn_label": "Button Label",
+        "img": "shopify:\/\/shop_images\/Frame_48098350.png"
       }
     },
     "featured-blog": {
