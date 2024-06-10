@@ -13,8 +13,8 @@
         "collection1": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Group_10663.png",
+            "url": "shopify:\/\/collections\/vaginal-health",
             "text": "Vaginal Health",
             "label": ""
           }
@@ -22,36 +22,18 @@
         "collection2": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
-            "url": "",
-            "text": "Weight Loss \u2028& Detox",
+            "image": "shopify:\/\/shop_images\/Ellipse_747_9b870880-7732-4af8-8cd3-4e2009c96f9c.png",
+            "url": "shopify:\/\/collections\/ph-balance",
+            "text": "pH Balance",
             "label": ""
           }
         },
-        "collection3": {
+        "collection_RC6QTP": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
-            "url": "",
-            "text": "Mental Health",
-            "label": "Sale"
-          }
-        },
-        "collection_pyPF3U": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
-            "url": "",
-            "text": "Period",
-            "label": ""
-          }
-        },
-        "collection_a3kd3R": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_747.png",
-            "url": "",
-            "text": "Climax & Menopause",
+            "image": "shopify:\/\/shop_images\/Ellipse_750.png",
+            "url": "shopify:\/\/collections\/itch",
+            "text": "Itch",
             "label": ""
           }
         }
@@ -59,9 +41,7 @@
       "block_order": [
         "collection1",
         "collection2",
-        "collection3",
-        "collection_pyPF3U",
-        "collection_a3kd3R"
+        "collection_RC6QTP"
       ],
       "settings": {
         "title": "",
