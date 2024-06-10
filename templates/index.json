@@ -131,19 +131,19 @@
         "ticker1": {
           "type": "text",
           "settings": {
-            "text": "Lumiway Theme Bootstrap"
+            "text": "Doctor-Developed"
           }
         },
         "ticker2": {
           "type": "text",
           "settings": {
-            "text": "Lumiway Theme Bootstrap"
+            "text": "Science-Backed"
           }
         },
         "ticker3": {
           "type": "text",
           "settings": {
-            "text": "Lumiway Theme Bootstrap"
+            "text": "FDA Appruved"
           }
         }
       },
