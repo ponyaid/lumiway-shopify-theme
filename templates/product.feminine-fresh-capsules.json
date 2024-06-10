@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "dynamic_buttons_checkbox": false
+      }
+    },
+    "emblems": {
+      "type": "emblems",
+      "settings": {
+        "title": "",
+        "pt": 3,
+        "pb": 3,
+        "background": "linear-gradient(180deg, #fff, #fff)"
+      }
+    },
+    "ticker": {
+      "type": "ticker",
+      "settings": {
+      }
+    },
+    "benefits-section": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_AgbbyG": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Benefit Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
+        "benefit1": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Benefit Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
+        "benefit2": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Benefit Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
+        "benefit3": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Benefit Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_AgbbyG",
+        "benefit1",
+        "benefit2",
+        "benefit3"
+      ],
+      "settings": {
+        "heading": "Block Heading",
+        "description": ""
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "settings": {
+        "title": "Lumiway FAQs",
+        "description": "",
+        "btn_url": "",
+        "btn_label": "I have a question"
+      }
+    },
+    "complementary-products": {
+      "type": "complementary-products",
+      "settings": {
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Blog posts",
+        "subtitle": "",
+        "blog": "",
+        "post_limit": 3
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "subtitle": "This will come in handy",
+        "products_to_show": 4
+      }
+    },
+    "feedback-section": {
+      "type": "feedback-section",
+      "settings": {
+        "title": "Questions?<br>Get in touchwith our wellness experts",
+        "phone_url": "",
+        "mail_url": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "emblems",
+    "ticker",
+    "benefits-section",
+    "faq-section",
+    "complementary-products",
+    "featured-blog",
+    "related-products",
+    "feedback-section"
+  ]
+}
