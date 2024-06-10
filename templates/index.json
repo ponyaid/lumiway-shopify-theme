@@ -178,7 +178,7 @@
         "product1": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "test-product"
           }
         },
         "product2": {
