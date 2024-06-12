@@ -62,16 +62,22 @@
           "benefit_HpxgWm": {
             "type": "benefit",
             "settings": {
+              "heading": "Benefit Heading",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
             }
           },
           "benefit_brkaan": {
             "type": "benefit",
             "settings": {
+              "heading": "Benefit Heading",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
             }
           },
           "benefit_79dKRJ": {
             "type": "benefit",
             "settings": {
+              "heading": "Benefit Heading",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
             }
           }
         },
@@ -81,6 +87,8 @@
           "benefit_79dKRJ"
         ],
         "settings": {
+          "heading": "Block Heading",
+          "description": "<p>Text Text Text Text <\/p>"
         }
       },
       "cart-drawer": {
