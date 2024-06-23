@@ -6,7 +6,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "url": "",
+            "url": "shopify:\/\/collections\/shop-all-products",
             "label": "Button Label"
           }
         }
@@ -23,10 +23,16 @@
     "emblems": {
       "type": "emblems",
       "blocks": {
+        "emblem_9VpkUc": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harpers-Bazaar-logo-500x281.png"
+          }
+        },
         "emblem1": {
           "type": "emblem",
           "settings": {
-            "image": "shopify:\/\/shop_images\/VOGUE_revista_-_logo.png"
+            "image": "shopify:\/\/shop_images\/Cosmopolitan-logo-500x281.png"
           }
         },
         "emblem2": {
@@ -38,17 +44,12 @@
         "emblem3": {
           "type": "emblem",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cosmopolitan-logo-500x281.png"
-          }
-        },
-        "emblem_DULzCd": {
-          "type": "emblem",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Harpers-Bazaar-logo-500x281.png"
+            "image": "shopify:\/\/shop_images\/VOGUE_revista_-_logo.png"
           }
         }
       },
       "block_order": [
+        "emblem_9VpkUc",
         "emblem1",
         "emblem2",
         "emblem3",
@@ -61,49 +62,49 @@
         "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
       }
     },
-    "benefits-section": {
-      "type": "benefits-section",
+    "list-collections": {
+      "type": "list-collections",
       "blocks": {
-        "benefit_QwLUkN": {
-          "type": "benefit",
+        "collection1": {
+          "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_743.png",
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Ellipse_743_d49a59c8-5842-40db-a8a3-60c324fe0a8a.png",
+            "url": "shopify:\/\/collections\/vaginal-health",
             "text": "Vaginal Health",
             "label": ""
           }
         },
-        "benefit1": {
-          "type": "benefit",
+        "collection2": {
+          "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_744.png",
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Ellipse_744_ba176650-a956-440f-9c17-196a58da7a2b.png",
+            "url": "shopify:\/\/collections\/weight-loss-detox",
             "text": "Weight Loss \u2028& Detox",
-            "label": ""
-          }
-        },
-        "benefit2": {
-          "type": "benefit",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_745.png",
-            "url": "",
-            "text": "Mental Health",
             "label": "sale"
           }
         },
-        "benefit3": {
-          "type": "benefit",
+        "collection3": {
+          "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_746.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_745_78cb2b10-19da-4706-b73d-ebc1bd86c38e.png",
+            "url": "shopify:\/\/collections\/mental-health",
+            "text": "Mental Health",
+            "label": ""
+          }
+        },
+        "collection_WKHm7k": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_10627.png",
             "url": "",
             "text": "Period",
             "label": ""
           }
         },
-        "benefit_nHXHam": {
-          "type": "benefit",
+        "collection_k7JQn3": {
+          "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_747.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_747_980e5bf6-5ed6-496f-9cb9-9cdc71274e59.png",
             "url": "",
             "text": "Climax & Menopause",
             "label": ""
@@ -111,14 +112,14 @@
         }
       },
       "block_order": [
-        "benefit_QwLUkN",
-        "benefit1",
-        "benefit2",
-        "benefit3",
-        "benefit_nHXHam"
+        "collection1",
+        "collection2",
+        "collection3",
+        "collection_WKHm7k",
+        "collection_k7JQn3"
       ],
       "settings": {
-        "title": "Women’s Wellness\u2028for every body",
+        "title": "Women’s Wellness\u2028<br> For Every Body",
         "subtitle": "<p>Safer, more effective wellness products for your gut, brain & vagina<\/p>",
         "pt": 4,
         "pb": 4,
@@ -131,25 +132,19 @@
         "ticker1": {
           "type": "text",
           "settings": {
-            "text": "Non-Toxic"
+            "text": "Doctor-Developed"
           }
         },
         "ticker2": {
           "type": "text",
           "settings": {
-            "text": "Doctor-Developed"
+            "text": "Science-Backed"
           }
         },
         "ticker3": {
           "type": "text",
           "settings": {
-            "text": "Science-Backed"
-          }
-        },
-        "text_CqbrnV": {
-          "type": "text",
-          "settings": {
-            "text": "FDA approved"
+            "text": "FDA Appruved"
           }
         }
       },
@@ -166,7 +161,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Shop Our Best Seller",
-        "subtitle": "Text Text Text Text",
+        "subtitle": "Short Description",
         "collection": "all",
         "products_to_show": 4
       }
@@ -174,25 +169,25 @@
     "content-section": {
       "type": "content-section",
       "settings": {
-        "title": "“a woman for <br>a woman”",
+        "title": "“a Woman for a Woman”",
         "text": "<p>We don't look at our website as a business, we look at it as a women's club where every woman can get support and understanding, all our products are things that solve the problems you are facing, we are a place where you are understood and supported, where women share their experiences. We are glad that we are together<\/p><hr><h5 class=\"text-uppercase\">Join over<\/h5><h2 class=\"fw-bold\" style=\"font-size:64px;\">350 000<\/h2><p>People who already live their best lives with Lumiway<\/p>",
         "image": "shopify:\/\/shop_images\/a_woman_for_a_woman_2x_1.png",
-        "background": "radial-gradient(rgba(240, 249, 254, 1), rgba(240, 249, 254, 1) 100%)",
+        "background": "linear-gradient(180deg, rgba(240, 249, 254, 1), rgba(240, 249, 254, 1) 100%)",
         "text_white": false
       }
     },
-    "17180210421f084071": {
+    "1718021401241050a5": {
       "type": "apps",
       "blocks": {
-        "archive_detect_ugc_feed_Jx8UnL": {
+        "archive_detect_ugc_feed_qCQ8Kr": {
           "type": "shopify:\/\/apps\/archive-detect-ugc\/blocks\/feed\/3bf10f27-2525-4f37-94f5-dedb92556f19",
           "settings": {
-            "feedId": "29ac6671-cfbe-4cd9-9394-de64d38a64d7"
+            "feedId": ""
           }
         }
       },
       "block_order": [
-        "archive_detect_ugc_feed_Jx8UnL"
+        "archive_detect_ugc_feed_qCQ8Kr"
       ],
       "settings": {
       }
@@ -203,23 +198,23 @@
         "product1": {
           "type": "product",
           "settings": {
-            "product": "test-product"
+            "product": "the-secret-to-all-day-your-v-freshness-with-feminine-fresh"
           }
         },
-        "product2": {
+        "product_bHJQz6": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "menopause-am-capsules"
           }
         }
       },
       "block_order": [
         "product1",
-        "product2"
+        "product_bHJQz6"
       ],
       "settings": {
-        "title": "Bestsellers Title",
-        "subtitle": ""
+        "title": "Best Sellers of the Month",
+        "subtitle": "This month, our girls chose these products"
       }
     },
     "banner": {
@@ -228,32 +223,32 @@
         "title": "Find Your Wellness Routine",
         "description": "Discover which products are right for you and build a routine with safer, more effective wellness products for your gut, brain & vagina.",
         "btn_url": "",
-        "btn_label": "Button Label",
-        "img": "shopify:\/\/shop_images\/Frame_48098350.png"
+        "btn_label": "match quiz >",
+        "img": "shopify:\/\/shop_images\/Group_10634.png"
       }
     },
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
-        "title": "Blog posts",
-        "subtitle": "",
+        "title": "The \u2028Lumiway Blog",
+        "subtitle": "<p>Learn about CBD use cases, latest research findings, and valuable tips on CBD consumption in our blog articles.<\/p>",
         "blog": "news",
         "post_limit": 3
       }
     },
-    "1718015076b9811758": {
+    "17180217011ff82613": {
       "type": "apps",
       "blocks": {
-        "okendo_reviews_widget_Jx4QNF": {
+        "okendo_reviews_widget_wdcWUC": {
           "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
-            "product": "",
-            "widget_type": "reviews_widget"
+            "product": "test-product",
+            "widget_type": "combined_widget"
           }
         }
       },
       "block_order": [
-        "okendo_reviews_widget_Jx4QNF"
+        "okendo_reviews_widget_wdcWUC"
       ],
       "settings": {
       }
@@ -307,15 +302,15 @@
   "order": [
     "hero",
     "emblems",
-    "benefits-section",
+    "list-collections",
     "ticker",
     "featured-collection",
     "content-section",
-    "17180210421f084071",
+    "1718021401241050a5",
     "bestsellers-section",
     "banner",
     "featured-blog",
-    "1718015076b9811758",
+    "17180217011ff82613",
     "faq-section",
     "feedback-section"
   ]

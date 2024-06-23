@@ -1,0 +1,87 @@
+<section class="main-blog__hero d-flex flex-column text-white pt-3 pt-md-4 pb-4 pb-md-5 position-relative">
+  {% if blog.metafields.custom.image.value %}
+    <div class="position-absolute top-0 start-0 end-0 bottom-0">
+      {{ blog.metafields.custom.image.value | img_tag: '', 'w-100 h-100 object-fit-cover', '1920x' }}
+    </div>
+  {% endif %}
+  <div class="position-absolute top-0 start-0 end-0 bottom-0" style="background: linear-gradient(180deg, rgba(1, 1, 1, 0.10) 0%, rgba(1, 1, 1, 0.60) 88.7%)"></div>
+  <div class="container-fluid position-relative">
+    <div class="mb-3">
+      {% render 'breadcrumbs' %}
+    </div>
+  </div>
+  <div class="container flex-fill position-relative py-4 pb-5">
+    <div class="text-center">
+      <h1 class="fw-bold">{{ blog.title }}</h1>
+      <p class="h6 fw-medium m-auto" style="max-width: 648px;">{{ blog.metafields.custom.description }}</p>
+    </div>
+  </div>
+  <div class="container position-relative">
+    <ul class="nav justify-content-center flex-wrap gap-2 mb-md-1">
+      {% for tag in blog.all_tags %}
+        {%- if current_tags contains tag -%}
+          <li class="nav-item bg-white rounded-pill fw-medium text-primary">{{ tag | link_to_remove_tag: tag }}</li>
+        {%- else -%}
+          <li class="nav-item bg-white bg-opacity-25 rounded-pill fw-medium">{{ tag | link_to_add_tag: tag }}</li>
+        {%- endif -%}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% paginate blog.articles by section.settings.article_limit %}
+
+  <section class="py-4 pt-md-5 pb-md-4">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {% for article in blog.articles %}
+          <div class="col">
+            {% include 'article-card'
+              , article: article %}
+          </div>
+        {% endfor %}
+        <div class="col">
+          <div class="card border-0 h-100 py-3 px-4" style="background: #FFEED0;">
+            <div class="card-body d-flex flex-column align-items-start">
+              <h2 class="h1 card-title fw-bold text-primary">
+                Space for Banner
+              </h2>
+              <a href="#" class="btn btn-outline-primary mt-auto">Button CTA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% if paginate.pages > 1 %}
+    <section class="py-4 border-top">
+      <div class="container pt-2 pt-md-3">
+        <div class="d-flex justify-content-center">
+          {% render 'pagination'
+            , paginate: paginate %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+{% endpaginate %}
+
+
+{% schema %}
+  {
+    "name": "Blog posts",
+    "settings": [
+      {
+        "type": "range",
+        "id": "article_limit",
+        "min": 2,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Article limit",
+        "default": 8
+      }
+    ]
+  }
+{% endschema %}

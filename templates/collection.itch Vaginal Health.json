@@ -1,0 +1,140 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true
+      }
+    },
+    "list-collections": {
+      "type": "list-collections",
+      "blocks": {
+        "collection_pyPF3U": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_10663.png",
+            "url": "shopify:\/\/collections\/vaginal-health",
+            "text": "Vaginal Health",
+            "label": ""
+          }
+        },
+        "collection_a3kd3R": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_746_aab23aed-e234-438f-91c5-799ef77980aa.png",
+            "url": "shopify:\/\/collections\/itch",
+            "text": "Itch",
+            "label": ""
+          }
+        },
+        "collection_A9UDWx": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_745_38de8e25-c58f-4a85-a0dd-19a20000ef9c.png",
+            "url": "shopify:\/\/collections\/odor",
+            "text": "Odor",
+            "label": ""
+          }
+        },
+        "collection_qGLnRk": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_746_7c01814b-ccbf-46d3-a2a8-81b74593a643.png",
+            "url": "shopify:\/\/collections\/ph-balance",
+            "text": "pH Balance",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_pyPF3U",
+        "collection_a3kd3R",
+        "collection_A9UDWx",
+        "collection_qGLnRk"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "pt": 4,
+        "pb": 4,
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "product_card_is_row": true
+      }
+    },
+    "1718022855b17f672c": {
+      "type": "apps",
+      "blocks": {
+        "archive_detect_ugc_collection_feed_CWFXa8": {
+          "type": "shopify:\/\/apps\/archive-detect-ugc\/blocks\/collection_feed\/3bf10f27-2525-4f37-94f5-dedb92556f19",
+          "settings": {
+            "feedId": ""
+          }
+        }
+      },
+      "block_order": [
+        "archive_detect_ugc_collection_feed_CWFXa8"
+      ],
+      "settings": {
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "question1": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        },
+        "question2": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        },
+        "question3": {
+          "type": "question",
+          "settings": {
+            "question": "Default Question",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<p>"
+          }
+        }
+      },
+      "block_order": [
+        "question1",
+        "question2",
+        "question3"
+      ],
+      "settings": {
+        "title": "Lumiway FAQs",
+        "description": "<p>If you need more information or help choosing the right product, our 24\/7 care <strong>girls<\/strong> would love to hear from you and <strong>help you<\/strong> find the right product and recommended amount to <strong>will make you shine<\/strong>!<\/p>",
+        "btn_url": "",
+        "btn_label": "I have a question"
+      }
+    },
+    "feedback-section": {
+      "type": "feedback-section",
+      "settings": {
+        "title": "Questions?<br>Get in touchwith our wellness experts",
+        "phone_url": "tel:+17653753950",
+        "mail_url": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "list-collections",
+    "product-grid",
+    "1718022855b17f672c",
+    "faq-section",
+    "feedback-section"
+  ]
+}

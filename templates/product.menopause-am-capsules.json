@@ -12,11 +12,7 @@
         "title": "",
         "pt": 3,
         "pb": 3,
-<<<<<<< HEAD
-        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
-=======
         "background": "linear-gradient(180deg, #fff, #fff)"
->>>>>>> dev
       }
     },
     "ticker": {
@@ -24,29 +20,6 @@
       "settings": {
       }
     },
-<<<<<<< HEAD
-    "list-collections": {
-      "type": "list-collections",
-      "blocks": {
-        "item1": {
-          "type": "item",
-          "settings": {
-            "heading": "Item Heading",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
-          }
-        },
-        "item2": {
-          "type": "item",
-          "settings": {
-            "heading": "Item Heading",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
-          }
-        },
-        "item3": {
-          "type": "item",
-          "settings": {
-            "heading": "Item Heading",
-=======
     "benefits-section": {
       "type": "benefits-section",
       "blocks": {
@@ -75,22 +48,15 @@
           "type": "benefit",
           "settings": {
             "heading": "Benefit Heading",
->>>>>>> dev
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
           }
         }
       },
       "block_order": [
-<<<<<<< HEAD
-        "item1",
-        "item2",
-        "item3"
-=======
         "benefit_AgbbyG",
         "benefit1",
         "benefit2",
         "benefit3"
->>>>>>> dev
       ],
       "settings": {
         "heading": "Block Heading",
@@ -106,13 +72,8 @@
         "btn_label": "I have a question"
       }
     },
-<<<<<<< HEAD
-    "bundle-section": {
-      "type": "bundle-section",
-=======
     "complementary-products": {
       "type": "complementary-products",
->>>>>>> dev
       "settings": {
       }
     },
@@ -128,12 +89,9 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-<<<<<<< HEAD
-=======
         "heading": "You may also like",
         "subtitle": "This will come in handy",
         "products_to_show": 4
->>>>>>> dev
       }
     },
     "feedback-section": {
@@ -149,15 +107,9 @@
     "main",
     "emblems",
     "ticker",
-<<<<<<< HEAD
-    "list-collections",
-    "faq-section",
-    "bundle-section",
-=======
     "benefits-section",
     "faq-section",
     "complementary-products",
->>>>>>> dev
     "featured-blog",
     "related-products",
     "feedback-section"

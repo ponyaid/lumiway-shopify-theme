@@ -1,11 +1,102 @@
-<section class="py-4" style="background: #F9F9F9;">
-  <div class="container pt-3 pb-2">
-    <div class="text-center">
-      <h2 class="h1 fw-bold text-capitalize">The perfect Match</h2>
-      <p>This will come in handy</p>
+<section class="recommend-products" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}&intent=related">
+  {% if recommendations.performed and recommendations.products_count > 0 %}
+    <div class="py-5" style="background: #F9F9F9;">
+      <div class="container py-2 pb-2">
+        <div class="text-center pb-md-3 mb-4">
+          <h2 class="h1 fw-bold text-capitalize">{{ section.settings.heading }}</h2>
+          <p class="h6">{{ section.settings.subtitle }}</p>
+        </div>
+        <div class="recommend-products__slider">
+          {% for product in recommendations.products %}
+            {% render "product-card"
+              , product: product %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
-    <div class="recommend-products__slider">
-      {% render "product-card" %}
-    </div>
-  </div>
+  {% endif %}
 </section>
+
+{% javascript %}
+  const handleIntersection = (entries, observer) => {
+    if (!entries[0].isIntersecting) return;
+    
+
+
+    observer.unobserve(productRecommendationsSection);
+
+    const url = productRecommendationsSection.dataset.url;
+
+    fetch(url).then(response => response.text()).then(text => {
+      const html = document.createElement('div');
+      html.innerHTML = text;
+      const recommendations = html.querySelector('.recommend-products');
+
+      if (recommendations && recommendations.innerHTML.trim().length) {
+        productRecommendationsSection.innerHTML = recommendations.innerHTML;
+
+        $(".recommend-products__slider").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          infinite: true,
+          responsive: [
+            {
+              breakpoint: 1201,
+              settings: {
+                slidesToShow: 3
+              }
+            }, {
+              breakpoint: 993,
+              settings: {
+                slidesToShow: 2
+              }
+            }, {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      }
+    }).catch(e => {
+      console.error(e);
+    });
+  };
+
+  const productRecommendationsSection = document.querySelector('.recommend-products');
+  const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
+
+  observer.observe(productRecommendationsSection);
+{% endjavascript %}
+
+
+{% schema %}
+  {
+    "name": "Related products",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "You may also like",
+        "label": "Heading"
+      }, {
+        "type": "inline_richtext",
+        "id": "subtitle",
+        "default": "This will come in handy",
+        "label": "Subtitle"
+      }, {
+        "type": "range",
+        "id": "products_to_show",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 4,
+        "label": "Products to show"
+      }
+    ]
+  }
+{% endschema %}

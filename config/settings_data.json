@@ -22,27 +22,35 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "link_list_gWTMzh": {
+            "type": "link_list",
+            "settings": {
+              "title": "Solution for You",
+              "menu": "solutions-for-you"
+            }
+          },
           "link_list_r49xGg": {
             "type": "link_list",
             "settings": {
-              "title": "Main menu",
-              "menu": "main-menu"
+              "title": "Categories",
+              "menu": "categories"
             }
           },
           "link_list_9bkMQF": {
             "type": "link_list",
             "settings": {
-              "title": "Quick Links",
-              "menu": "footer"
+              "title": "Policies",
+              "menu": "policies"
             }
           }
         },
         "block_order": [
+          "link_list_gWTMzh",
           "link_list_r49xGg",
           "link_list_9bkMQF"
         ],
         "settings": {
-          "contacts": "",
+          "contacts": "<p>Call:  <a href=\"tel:877-959-6259\" title=\"tel:877-959-6259\">877-959-6259<\/a><br\/>E-mail: <a href=\"mailto:support@lumiway.com\" title=\"mailto:support@lumiway.com\">support@lumiway.com<\/a><br\/>Address: Doctor Beauty Inc. Park 80 West, 250 Pehle Ave, Suite 200, Saddle Brook, NJ, 07663<\/p>",
           "col_num": 3,
           "enable_payment_type_icons": true,
           "copyright": "Copyright © 2024 Lumiway. All rights reserved."
@@ -54,22 +62,22 @@
           "benefit_HpxgWm": {
             "type": "benefit",
             "settings": {
-              "url": "",
-              "text": "Vaginal Health"
+              "heading": "Benefit Heading",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
             }
           },
           "benefit_brkaan": {
             "type": "benefit",
             "settings": {
-              "url": "",
-              "text": "Benefit Label"
+              "heading": "Benefit Heading",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
             }
           },
           "benefit_79dKRJ": {
             "type": "benefit",
             "settings": {
-              "url": "",
-              "text": "Benefit Label"
+              "heading": "Benefit Heading",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
             }
           }
         },
@@ -79,11 +87,8 @@
           "benefit_79dKRJ"
         ],
         "settings": {
-          "title": "We're at every stage<br>Of your life",
-          "subtitle": "<p>Safer, more effective wellness products for your gut, brain & vagina<\/p>",
-          "pt": 4,
-          "pb": 4,
-          "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+          "heading": "Block Heading",
+          "description": "<p>Text Text Text Text <\/p>"
         }
       },
       "cart-drawer": {

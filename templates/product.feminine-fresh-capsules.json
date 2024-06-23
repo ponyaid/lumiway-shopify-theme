@@ -1,0 +1,271 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "dynamic_buttons_checkbox": false
+      }
+    },
+    "emblems": {
+      "type": "emblems",
+      "blocks": {
+        "emblem_NXdChb": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Harpers-Bazaar-logo-500x281.png"
+          }
+        },
+        "emblem_npJT4j": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cosmopolitan-logo-500x281.png"
+          }
+        },
+        "emblem_JgAR4b": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Womens-Health-logo-500x281.png"
+          }
+        },
+        "emblem_xzkPK7": {
+          "type": "emblem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VOGUE_revista_-_logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "emblem_NXdChb",
+        "emblem_npJT4j",
+        "emblem_JgAR4b",
+        "emblem_xzkPK7"
+      ],
+      "settings": {
+        "title": "fetured in",
+        "pt": 3,
+        "pb": 3,
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)"
+      }
+    },
+    "ticker": {
+      "type": "ticker",
+      "blocks": {
+        "text_qn6hhH": {
+          "type": "text",
+          "settings": {
+            "text": "Reduces Risk of BV\/UTI Infection and Dryness"
+          }
+        },
+        "text_H4pngJ": {
+          "type": "text",
+          "settings": {
+            "text": "Enhanced Digestive Health"
+          }
+        },
+        "text_HF6Kmx": {
+          "type": "text",
+          "settings": {
+            "text": "Maintains Vaginal pH Balance"
+          }
+        },
+        "text_h3gABp": {
+          "type": "text",
+          "settings": {
+            "text": "Boosts Immune System"
+          }
+        },
+        "text_FgTUay": {
+          "type": "text",
+          "settings": {
+            "text": "Reduces Bloating and Gas"
+          }
+        },
+        "text_FCHdQT": {
+          "type": "text",
+          "settings": {
+            "text": "Prevents Vaginal Odor and Yeast Infections"
+          }
+        }
+      },
+      "block_order": [
+        "text_qn6hhH",
+        "text_H4pngJ",
+        "text_HF6Kmx",
+        "text_h3gABp",
+        "text_FgTUay",
+        "text_FCHdQT"
+      ],
+      "settings": {
+      }
+    },
+    "benefits-section": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_AgbbyG": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_48098609.png",
+            "heading": "Hot  flashes",
+            "description": "<p>Are those unexpected heat waves, like the whole world is on fire and slamming into you at the most unexpected moment, keeping you from feeling like yourself?<\/p>"
+          }
+        },
+        "benefit_9QJCtb": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a_woman_for_a_woman_2x_1.png",
+            "heading": "Benefit Heading",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        },
+        "benefit_RHXMXr": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_48098605.png",
+            "heading": "Decreased Libido",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero eligendi laboriosam quam mollitia voluptatibus tempore quibusdam? In nihil alias suscipit non ipsum quae magni harum?<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_AgbbyG",
+        "benefit_9QJCtb",
+        "benefit_RHXMXr"
+      ],
+      "settings": {
+        "heading": "Is Feminine \u2028Fresh For You?",
+        "description": "<p>If you check any of these boxes, Feminine is for you!<\/p>"
+      }
+    },
+    "content_section_RUFzXp": {
+      "type": "content-section",
+      "settings": {
+        "title": "Made with only clean ingredients",
+        "text": "Lactobacillus Acidophilus\nMost-researched stain of probiotic when it comes to establishing and maintaining a healthy vaginal",
+        "image": "shopify:\/\/shop_images\/Group_1171275782.png",
+        "background": "linear-gradient(180deg, rgba(240, 249, 254, 1), rgba(240, 249, 254, 1) 100%)",
+        "text_white": false
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "question_pfCHtC": {
+          "type": "question",
+          "settings": {
+            "question": "What are women’s probiotics and how do they work?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_eEkjcD": {
+          "type": "question",
+          "settings": {
+            "question": "What are the benefits of women’s probiotics?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_yqNYGa": {
+          "type": "question",
+          "settings": {
+            "question": "Can probiotics help with yeast infection?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_8ELNtJ": {
+          "type": "question",
+          "settings": {
+            "question": "How often should women’s probiotics be taken?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_dDm7Yi": {
+          "type": "question",
+          "settings": {
+            "question": "Can probiotics be combined with other supplements or medication?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        },
+        "question_XhC9c3": {
+          "type": "question",
+          "settings": {
+            "question": "How we make shipping?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ad dignissimos deleniti consectetur consequatur quidem sapiente culpa commodi sint sequi?<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_pfCHtC",
+        "question_eEkjcD",
+        "question_yqNYGa",
+        "question_8ELNtJ",
+        "question_dDm7Yi",
+        "question_XhC9c3"
+      ],
+      "settings": {
+        "title": "Lumiway FAQs",
+        "description": "<p>If you need more information or help choosing the right product, our 24\/7 care girls would love to hear from you and help you find the right product and recommended amount to will make you shine!<\/p>",
+        "btn_url": "shopify:\/\/pages\/contact",
+        "btn_label": "I have a question"
+      }
+    },
+    "1718026800244e66b5": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_Dy7N6p": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_Dy7N6p"
+      ],
+      "settings": {
+      }
+    },
+    "complementary-products": {
+      "type": "complementary-products",
+      "settings": {
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "The \u2028Lumiway Blog",
+        "subtitle": "<p>Learn about CBD use cases, latest research findings, and valuable tips on CBD consumption in our blog articles.<\/p>",
+        "blog": "news",
+        "post_limit": 3
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "subtitle": "This will come in handy",
+        "products_to_show": 4
+      }
+    },
+    "feedback-section": {
+      "type": "feedback-section",
+      "settings": {
+        "title": "Questions?<br>Get in touchwith our wellness experts",
+        "phone_url": "",
+        "mail_url": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "emblems",
+    "ticker",
+    "benefits-section",
+    "content_section_RUFzXp",
+    "faq-section",
+    "1718026800244e66b5",
+    "complementary-products",
+    "featured-blog",
+    "related-products",
+    "feedback-section"
+  ]
+}
