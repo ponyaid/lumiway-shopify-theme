@@ -1,5 +1,5 @@
-<header class="header bg-white shadow-sm position-relative" id="header">
-  <nav class="navbar navbar-expand-lg py-3">
+<header class="header bg-white position-relative" id="header">
+  <nav class="navbar navbar-expand-lg py-3 shadow-sm z-2">
     <div class="container-fluid container-md">
       <div class="header__layout">
         <div class="d-block d-lg-none">
@@ -51,7 +51,31 @@
           class="collapse navbar-collapse justify-content-center order-last order-lg-0"
           id="navbarNav"
           data-bs-parent="#header">
-          <ul class="navbar-nav gap-3">
+
+
+          <ul class="navbar-nav gap-3 {% if section.settings.mega_menu %}d-none d-lg-flex{% else %}d-none visually-hidden{% endif %}">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'mega_menu' -%}
+                <li class="nav-item text-nowrap">
+                  <a
+                    class="header__nav-link nav-link"
+                    data-bs-toggle="collapse"
+                    href="#collapseCollections{{ block.settings.collection.id }}"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseCollections{{ block.settings.collection.id }}">
+                    {% if block.settings.title != blank %}
+                      {{ block.settings.title }}
+                    {% else %}
+                      {{ block.settings.collection.title }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+
+          <ul class="navbar-nav gap-3 {% if section.settings.mega_menu %}d-lg-none{% endif %}">
 
             {% for link in section.settings.menu.links %}
 
@@ -81,6 +105,7 @@
               {% endif %}
             {% endfor %}
           </ul>
+
         </div>
         <div class="d-flex justify-content-end">
           <ul class="navbar-nav flex-row gap-3">
@@ -114,7 +139,7 @@
             </li>
 
             {% if shop.customer_accounts_enabled %}
-              <li class="nav-item dropdown d-none d-sm-block">
+              <li class="nav-item dropdown d-none d-lg-block">
                 <button class="nav-link" data-bs-toggle="dropdown">
                   {%- render 'icon'
                     , icon: 'account' -%}
@@ -145,10 +170,10 @@
     </div>
   </nav>
   <div
-    class="collapse"
+    class="collapse position-absolute top-100 right-0 w-100 z-1 bg-white"
     id="collapseSearch"
     data-bs-parent="#header">
-    <div class="pb-3 pt-1">
+    <div class="py-3">
       <div class="container-fluid container-md">
         <form
           action="/search"
@@ -186,6 +211,52 @@
       </div>
     </div>
   </div>
+
+
+  {% for block in section.blocks %}
+    {% if block.type == 'mega_menu' %}
+      <div
+        class="collapse position-absolute top-100 right-0 w-100 z-1 bg-white"
+        id="collapseCollections{{ block.settings.collection.id }}"
+        data-bs-parent="#header">
+        <div class="py-4">
+          <div class="container py-3">
+            <div class="row justify-content-center">
+              {% for product in collections[block.settings.collection].products limit: 6 %}
+                {% assign image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+                <div class="col-2">
+                  <div class="card border-0">
+                    <a href="{{ product.url }}" collection-handle="{{ product.handle }}">
+                      <div class="ratio ratio-1x1">
+                        {% if image != blank %}
+                          {{ image | img_tag: product.title, 'h-100 object-fit-cover rounded', '240x' }}
+                        {% else %}
+                          {{ 'product-1' | placeholder_svg_tag: 'h-100 object-fit-cover rounded' }}
+                        {% endif %}
+                      </div>
+                    </a>
+                    <div class="card-body p-0 pt-2">
+                      <h6 class="card-title fw-bold">
+                        <a href="{{ product.url }}">{{ product.title }}</a>
+                      </h6>
+                      <div class="d-flex gap-1 align-items-center">
+                        {%- render 'icon'
+                          , icon: 'stars' -%}
+                        <small>
+                          <strong>4.5</strong>
+                          <span class="text-muted">(823 reviews)</span>
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
 </header>
 
 
@@ -197,6 +268,29 @@
         "type": "link_list",
         "id": "menu",
         "label": "Menu"
+      }, {
+        "type": "checkbox",
+        "id": "mega_menu",
+        "label": "Enable Mega Menu",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "mega_menu",
+        "name": "Mega Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Mega"
+          }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
       }
     ]
   }
