@@ -181,6 +181,9 @@ h5 {
 .header .form-control {
   border: none;
 }
+.header h6 {
+  font-family: "Archivo Expanded";
+}
 
 .main-product__thumbnails {
   margin: 0 -0.5rem;
