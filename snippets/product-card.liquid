@@ -1,8 +1,20 @@
 {% assign image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
 
-<div class="product-card h-100">
+<div class="product-card h-100 position-relative">
+  {% if product.type != blank %}
+    <div class="position-absolute top-0 start-0 mt-2 ms-2 p-1 z-1">
+      <div class="product-type">
+        {% render "icon"
+          , icon: product.type %}
+        <span>
+          <small>{{ product.type }}</small>
+        </span>
+      </div>
+    </div>
+  {% endif %}
+
   <div class="card d-flex overflow-hidden h-100 {% if isRow %}border-0{% endif %}">
-    <div class="row flex-fill g-0">
+    <div class="row flex-fill g-0 {% if isRow != true %}flex-column{% endif %}">
       <div class="col-12 {% if isRow %}col-lg-6{% endif %}">
         <div class="ratio ratio-1x1 {% if isRow %}h-md-100{% endif %}">
           {% if image != blank %}
@@ -26,30 +38,25 @@
             </small>
           </div>
           <ul class="list-unstyled">
-            <li class="d-flex mb-1">
-              {%- render 'icon'
-                , icon: 'product-benefit'
-                , class: 'me-2' -%}
-              Improving Vaginal Health
-            </li>
-            <li class="d-flex mb-1">
-              {%- render 'icon'
-                , icon: 'product-benefit'
-                , class: 'me-2' -%}
-              Protection against infections
-            </li>
-            <li class="d-flex mb-1">
-              {%- render 'icon'
-                , icon: 'product-benefit'
-                , class: 'me-2' -%}
-              Normalization of microflora and pH
-            </li>
+            {% for item in product.selected_or_first_available_variant.metafields.custom.json_benefits.value %}
+              <li class="d-flex mb-1">
+                {%- render 'icon'
+                  , icon: 'check-mark'
+                  , class: 'me-2' -%}
+                {{ item[0] }}
+              </li>
+            {% endfor %}
           </ul>
           <hr class="mt-auto">
           <div class="d-flex align-items-start">
             <div class="me-2">
               <small class="mb-1 fw-medium text-muted">Starting at</small>
-              <p class="h6 fw-semibold m-0">{{ product.price | money }}</p>
+              {% assign qty = product.variants.last.title | times: 1 %}
+              {% if qty != 0 %}
+                <p class="h6 fw-semibold m-0">{{ product.price_max | divided_by: qty | money }}</p>
+              {% else %}
+                <p class="h6 fw-semibold m-0">{{ product.price_min | money }}</p>
+              {% endif %}
             </div>
             <a href="{{ product.url  }}" class="btn {% if isRow %}btn-primary{% else %}btn-outline-primary{% endif %} ms-auto">More</a>
           </div>

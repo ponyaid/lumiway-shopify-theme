@@ -1,0 +1,160 @@
+<section class="pt-{{ section.settings.pt }} pb-{{ section.settings.pb }}">
+  <div class="container">
+    <div class="{{ section.settings.text_position }}">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 class="fw-bold {{ block.settings.heading_size }}">
+              {{ block.settings.heading }}
+            </h2>
+          {%- when 'text' -%}
+            <div class="h6">
+              {{ block.settings.text }}
+            </div>
+          {%- when 'button' -%}
+            <div>
+              {%- if block.settings.button_label != blank -%}
+                <a
+                  {% if block.settings.button_link == blank %}
+                  role="link"
+                  aria-disabled="true"
+                  {% else %}
+                  href="{{ block.settings.button_link }}"
+                  {% endif %}
+                  class="btn {% if block.settings.button_style_outline %}btn-outline-primary{% else %}btn-primary{% endif %}">
+                  {{- block.settings.button_label | escape -}}
+                </a>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "rich-text-section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "select",
+        "id": "text_position",
+        "options": [
+          {
+            "value": "text-start",
+            "label": "Text Left"
+          }, {
+            "value": "text-center",
+            "label": "Text Center"
+          }, {
+            "value": "text-end",
+            "label": "Text Right"
+          }
+        ],
+        "default": "text-center",
+        "label": "Text Position"
+      }, {
+        "type": "range",
+        "id": "pt",
+        "default": 5,
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "label": "Padding Top"
+      }, {
+        "type": "range",
+        "id": "pb",
+        "default": 4,
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "label": "Padding Bottom"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "default": "Section Heading",
+            "label": "Section Heading"
+          }, {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+              {
+                "value": "h2",
+                "label": "Heading H2"
+              }, {
+                "value": "h1",
+                "label": "Heading H1"
+              }, {
+                "value": "h3",
+                "label": "Heading H3"
+              }, {
+                "value": "h4",
+                "label": "Heading H4"
+              }
+            ],
+            "default": "h1",
+            "label": "Heading Size"
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "Section Text",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Section Text</p>",
+            "label": "Section Text"
+          }
+        ]
+      }, {
+        "type": "button",
+        "name": "Section Button",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_label",
+            "default": "Button Label",
+            "label": "Button Label"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }, {
+            "type": "checkbox",
+            "id": "button_style_outline",
+            "default": false,
+            "label": "Button Style Outline"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Rich Text Section",
+        "blocks": [
+          {
+            "type": "heading"
+          }, {
+            "type": "text"
+          }, {
+            "type": "button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

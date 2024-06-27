@@ -7,13 +7,13 @@
     {% endif %}
   </div>
   <div class="overflow-scroll">
-    <div class="d-flex justify-content-around align-items-center">
+    <div class="d-flex justify-content-around align-items-center gap-5">
       {%- for block in section.blocks -%}
-        <div class="col-4 col-md-1">
+        <div class="col-4 col-md-{{ section.settings.size }}">
           {% if block.settings.image %}
-            {{ block.settings.image | img_tag: "", "img-fluid" }}
+            {{ block.settings.image | img_tag: "", "w-100 h-auto", 'large' }}
           {% else %}
-            {{ 'image' | placeholder_svg_tag: 'img-fluid' }}
+            {{ 'image' | placeholder_svg_tag: 'w-100 h-auto' }}
           {% endif %}
         </div>
       {%- endfor -%}
@@ -30,25 +30,36 @@
         "type": "text",
         "id": "title",
         "label": "Emblems Title"
-      }, {
+      },
+      {
         "type": "range",
         "id": "pt",
         "default": 3,
         "min": 0,
         "max": 5,
         "label": "Padding Top"
-      }, {
+      },
+      {
         "type": "range",
         "id": "pb",
         "default": 3,
         "min": 0,
         "max": 5,
         "label": "Padding Bottom"
-      }, {
+      },
+      {
         "type": "color_background",
         "id": "background",
         "label": "Background",
         "default": "linear-gradient(180deg, #fff, #fff)"
+      }, {
+        "type": "range",
+        "id": "size",
+        "default": 2,
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "label": "Emblem Size"
       }
     ],
     "blocks": [

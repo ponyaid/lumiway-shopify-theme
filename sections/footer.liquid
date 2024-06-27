@@ -1,6 +1,6 @@
-<footer class="pt-3 pt-md-5 pb-3 bg-white border-top">
+<footer class="footer pt-3 pt-md-5 pb-3 bg-white border-top">
   <div class="container-fluid container-md">
-    <div class="row pt-4 pb-3 pb-md-5">
+    <div class="row pt-4 pb-md-5">
       <div class="col-12 col-md-4">
         <a class="d-block mb-4 mb-md-5" href="/">
           {%- if settings.logo != blank -%}
@@ -21,24 +21,36 @@
       <div class="col">
         <div class="row row-cols-1 row-cols-sm-{{ section.settings.col_num }}">
           {% for block in section.blocks %}
-            {% assign item = block.settings %}
-            <div class="col">
-              <p class="fw-semibold">{{ item.title }}</p>
-              {% assign footer_linklist = item.menu %}
-              <ul class="list-unstyled text-small">
-                {% for link in linklists[footer_linklist].links %}
-                  <li class="mb-3">
-                    <a href="{{ link.url }}">{{ link.title | escape }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
+            {% if block.type == 'link_list' %}
+              <div class="col">
+                <div class="footer__nav">
+                  <div
+                    class="footer__nav-title d-flex align-items-center fw-semibold py-3 {% if forloop.first %}{% else %}collapsed{% endif %}"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#{{ block.id }}"
+                    aria-expanded="false"
+                    aria-controls="{{ block.id }}">
+                    {{ block.settings.title }}
+                  </div>
+
+                  <div>
+                    <ul class="collapse list-unstyled text-small m-0 {% if forloop.first %}show{% endif %}" id="{{ block.id }}">
+                      {% for link in linklists[block.settings.menu].links %}
+                        <li class="mb-3">
+                          <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
           {% endfor %}
         </div>
 
       </div>
     </div>
-    <hr>
+    <hr class="mt-0 mt-sm-3">
     <div class="row g-3 row-cols-1 row-cols-md-3 py-3">
       <div class="col"></div>
       <div class="col order-last order-md-0 text-center">

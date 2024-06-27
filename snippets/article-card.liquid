@@ -1,4 +1,17 @@
-<div class="article-card h-100">
+<div class="article-card h-100 position-relative">
+  <div class="position-absolute top-0 start-0 mt-2 ms-2 p-1 z-1">
+    <div class="d-flex flex-wrap gap-2">
+      {% for tag in article.tags %}
+        <div class="product-type">
+          {% render "icon"
+            , icon: tag %}
+          <span>
+            <small>{{ tag }}</small>
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
   <div class="card border-0">
     <div class="ratio ratio-16x9">
       {% if article.image != blank %}
