@@ -1,5 +1,5 @@
 :root {
-    --bs-primary: #F04F23;
+    --bs-primary: #F26232;
     --bs-body-color: #010101;
     --bs-secondary-bg-rgb: 239, 238, 243;
     --bs-secondary-color: rgba(33, 25, 85, 0.50);
@@ -92,7 +92,7 @@ h5 {
 }
 
 .btn-outline-secondary {
-    --bs-btn-color: #6c757d;
+    --bs-btn-color: var(--bs-body-color);
     --bs-btn-border-color: #6c757d;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #6c757d;
@@ -219,31 +219,6 @@ h5 {
 
 
 .product-variant {
-    &__price {
-        font-size: 22px;
-        font-weight: 700;
-    }
-
-    &__metafields {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        @media (min-width: 768px) {
-            &>*:nth-child(1) {
-                grid-row-end: 3;
-                grid-row-start: 1;
-            }
-        }
-
-        @media (max-width: 767px) {
-            gap: .5rem;
-
-            &>*:nth-child(3) {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-        }
-    }
 
     label {
         cursor: pointer;
@@ -254,9 +229,9 @@ h5 {
         --bs-card-bg: #faf9fb;
     }
 
-    .card-header {
-        color: rgba(33, 25, 85, 0.40);
-        font-size: 13px;
+    .card-body {
+        border-width: 1.5px;
+        border-color: rgba(33, 25, 85, 0.12);
     }
 
     .card-body {
@@ -270,37 +245,35 @@ h5 {
 
     input:checked+label {
         .card {
-            border-color: #00C2AE;
+            border-color: var(--bs-primary);
             --bs-card-bg: var(--bs-body-bg);
             box-shadow: 0px 6px 12px 0px rgba(176, 191, 189, 0.24), 0px 22px 22px 0px rgba(176, 191, 189, 0.20), 0px 51px 30px 0px rgba(176, 191, 189, 0.12), 0px 90px 36px 0px rgba(176, 191, 189, 0.04), 0px 140px 39px 0px rgba(176, 191, 189, 0.00);
+            background-color: var(--bs-primary) !important;
         }
 
         .card-header {
-            background: rgba(0, 194, 174, 0.32) !important;
-            color: rgba(33, 25, 85, 1);
+            color: #fff;
         }
-    }
 
-    input:checked+label &__price,
-    input:checked+label &__ft {
-        color: #00C2AE;
+        .card-body {
+            border: none !important;
+        }
     }
 
     .progress-stacked {
         gap: 3px;
-        --bs-progress-height: 6px;
+        --bs-progress-height: .5rem;
         --bs-progress-bg: white;
     }
 
     .progress {
         width: 32.5%;
-        --bs-progress-bar-bg: #00C2AE;
+        --bs-progress-bar-bg: var(--bs-primary);
 
     }
 
     .progress-bar.bg-secondary {
         background-color: #E7E7E7 !important;
-
     }
 }
 
@@ -605,22 +578,6 @@ h5 {
 
     .accordion-button {
         font-family: "Archivo Expanded";
-    }
-}
-
-.main-product-ingredients {
-    &__content {
-        @media (min-width: 992px) {
-            padding-right: calc((100vw - 960px) / 2);
-        }
-
-        @media (min-width: 1200px) {
-            padding-right: calc((100vw - 1140px) / 2);
-        }
-
-        @media (min-width: 1400px) {
-            padding-right: calc((100vw - 1320px) / 2);
-        }
     }
 }
 

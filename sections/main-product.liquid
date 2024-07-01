@@ -66,7 +66,7 @@
                       </div>
                     </div>
                     <div>
-                      I was looking for effective sleep supplement for so long! Melatonin alone                               
+                      I was looking for effective sleep supplement for so long! Melatonin alone                                                                                                                                               
                                             doesnt
                                             help me at all.
                     </div>
@@ -86,7 +86,7 @@
               <div class="d-flex align-items-end w-100 mt-auto">
                 <div class="text-white col-md-5">
                   <p class="mb-2 text-uppercase fw-semibold">Podacst</p>
-                  <div class="h5 m-0 card-title fw-bold">Why are probiotics so important for girls                               
+                  <div class="h5 m-0 card-title fw-bold">Why are probiotics so important for girls                                                                                                                                               
                                         today?</div>
                 </div>
                 <div class="ms-auto">
@@ -171,86 +171,117 @@
               <fieldset class="bg-body-secondary p-2 rounded-2 mb-3">
                 <div class="row row-cols-1 row-cols-md-3 g-2">
                   {% for variant in product.variants %}
-                    <div class="col product-variant">
-                      <input
-                        type="radio"
-                        id="main-product-{{ variant.id }}"
-                        style="display: none;"
-                        {% if forloop.first %}
-                        checked{% endif %}
-                        name="id"
-                        value="{{ variant.id }}">
-                      <label class="w-100 cursor-pointer" for="main-product-{{ variant.id }}">
-                        <div class="card">
-                          <div class="card-header text-center text-uppercase fw-semibold border border-white py-1 rounded-2 bg-body-secondary">
-                            {{ variant.metafields.custom.package_name }}
+
+                    <div class="col">
+                      <div class="product-variant">
+                        <input
+                          type="radio"
+                          id="main-product-{{ variant.id }}"
+                          style="display: none;"
+                          {% if forloop.first %}
+                          checked{% endif %}
+                          name="id"
+                          value="{{ variant.id }}">
+                        <label class="w-100 cursor-pointer" for="main-product-{{ variant.id }}">
+
+                          <div class="card bg-body-secondary">
+                            <div class="card-header text-center py-1 border-0 bg-transparent">
+                              <small class="text-uppercase fw-semibold">
+                                {{ variant.metafields.custom.package_name }}
+                              </small>
+                            </div>
+                            <div class="card-body d-flex flex-column bg-white rounded border-top">
+                              <div class="row">
+                                <div class="col-12 mb-1 mb-md-2">
+                                  {% assign expected_result = variant.metafields.custom.expected_result | strip %}
+                                  <div class="d-flex flex-md-column align-items-center align-items-md-stretch">
+                                    <div class="d-flex align-items-center mb-2">
+                                      <div class="text-muted">
+                                        <small>Expected result:</small>
+                                      </div>
+                                      <div class="ms-auto d-none d-md-block">
+                                        <small>{{ expected_result }}</small>
+                                      </div>
+                                    </div>
+
+                                    <div class="progress-stacked col-3 col-md-12 ms-auto">
+                                      <div class="progress" role="progressbar">
+                                        <div class="progress-bar"></div>
+                                      </div>
+                                      <div class="progress" role="progressbar">
+                                        <div class="progress-bar {% if expected_result == 'Min' %}bg-secondary{% endif %}"></div>
+                                      </div>
+                                      <div class="progress" role="progressbar">
+                                        <div class="progress-bar {% if expected_result == 'Min'  or expected_result == 'Normal' %}bg-secondary{% endif %}"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-6 col-md-12 order-1 order-md-0">
+                                  <ul class="list-unstyled mb-2">
+                                    {% for item in variant.metafields.custom.json_benefits.value %}
+                                      <li class="d-flex mb-1">
+                                        {% if item[1] %}
+                                          {%- render 'icon'
+                                            , icon: 'check-mark'
+                                            , class: 'me-2' -%}
+                                        {% else %}
+                                          {%- render 'icon'
+                                            , icon: 'uncheck-mark'
+                                            , class: 'me-2' -%}
+                                        {% endif %}
+                                        {{ item[0] }}
+                                      </li>
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+
+                                <div class="col-12">
+                                  <div class="d-flex align-items-center">
+                                    <div class="text-muted d-block d-md-none me-auto">
+                                      <small>Bottles:</small>
+                                    </div>
+                                    <div class="d-flex gap-md-2 justify-content-between justify-content-md-center col-3 col-md-12">
+                                      {% assign range = product.variants.last.title | times: 1 %}
+                                      {% for i in (1..range) %}
+                                        {% assign qty = variant.title | times: 1 %}
+                                        {% if qty >= i %}
+                                          {% assign class = "text-primary" %}
+                                        {% else %}
+                                          {% assign class = "text-muted" %}
+                                        {% endif %}
+                                        {%- render 'icon'
+                                          , icon: 'jar'
+                                          , class: class -%}
+                                      {% endfor %}
+                                    </div>
+                                  </div>
+                                  <hr>
+                                </div>
+
+                                <div class="col-6 col-md-12 order-1">
+                                  <div class="ms-auto ms-md-0 text-end text-md-start">
+                                    <div class="d-flex flex-column d-md-block">
+                                      <span class="h5 fw-semibold order-1 order-md-0 m-0">
+                                        {{ variant.price | divided_by: variant.title | money }}</span>
+                                      <span class="h6 fw-medium text-muted m-0">
+                                        <s>{{ variant.compare_at_price | divided_by: variant.title | money }}</s>
+                                      </span>
+                                    </div>
+                                    <div class="fw-semibold">
+                                      <small class="text-muted">Cost per bottle</small>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="card-body d-flex flex-column">
-                            <div class="product-variant__metafields mb-3">
-                              <div>Expected result:</div>
-                              <div class="text-end text-md-start">
-                                {% assign expected_result = variant.metafields.custom.expected_result | strip %}
-                                <p class="fw-semibold m-0">{{ expected_result }}</p>
-                              </div>
-                              <div class="progress-stacked">
-                                <div class="progress" role="progressbar">
-                                  <div class="progress-bar"></div>
-                                </div>
-                                <div class="progress" role="progressbar">
-                                  <div class="progress-bar {% if expected_result == 'Min'
-                                                                    %}bg-secondary{% endif %}">
-</div>
-                                </div>
-                                <div class="progress" role="progressbar">
-                                  <div class="progress-bar {% if expected_result == 'Min'
-                                                                    or expected_result == 'Normal' %}bg-secondary{% endif
-                                                                    %}">
-</div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row cols-2 g-3 mb-2 mb-md-0 order-first order-md-0">
-                              <div class="col">Enough:</div>
-                              <div class="col fw-semibold text-end text-md-start">
-                                {{ variant.title }}</div>
-                            </div>
-                            <hr class="d-none d-md-block">
-                            <div class="d-flex flex-md-column">
-                              <ul class="list-unstyled m-0">
-                                {% for item in variant.metafields.custom.json_benefits.value %}
-                                  <li class="d-flex mb-1">
-                                    {% if item[1] %}
-                                      {%- render 'icon'
-                                        , icon: 'check-mark'
-                                        , class: 'me-2' -%}
-                                    {% else %}
-                                      {%- render 'icon'
-                                        , icon: 'uncheck-mark'
-                                        , class: 'me-2' -%}
-                                    {% endif %}
-                                    {{ item[0] }}
-                                  </li>
-                                {% endfor %}
-                              </ul>
-                              <hr class="d-none d-md-block">
-                              <div class="ms-auto ms-md-0 text-end text-md-start">
-                                <div class="d-flex flex-column d-md-block">
-                                  <span class="product-variant__price order-1 order-md-0">{{
-variant.price | divided_by: variant.title | money }}</span>
-                                  <span class="text-muted">
-                                    <s>{{
-variant.compare_at_price | divided_by: variant.title | money }}</s>
-                                  </span>
-                                </div>
-                                <div class="product-variant__ft fw-semibold">
-                                  <small>Cost per bottle</small>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </label>
+
+                        </label>
+                      </div>
                     </div>
+
                   {% endfor %}
                 </div>
               </fieldset>
@@ -287,10 +318,10 @@ variant.compare_at_price | divided_by: variant.title | money }}</s>
         </div>
         <div class="custom-accordion">
           <div class="accordion" id="accordionDetails">
-            <div class="accordion-item border-0 border-bottom">
+            <div class="accordion-item border-0 border-bottom rounded-0">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button bg-transparent rounded-0 px-0"
+                  class="accordion-button bg-transparent rounded-0 shadow-none px-0"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -306,21 +337,19 @@ variant.compare_at_price | divided_by: variant.title | money }}</s>
                 <div class="accordion-body px-0">
                   <ul class="m-0">
                     <li>Supports balanced vaginal pH and healthy vaginalenvironment*</li>
-                    <li>Supports healthy levels of vaginal bacteria andyeast through the gut-vagina                               
-                                            connection*</li>
+                    <li>Supports healthy levels of vaginal bacteria andyeast through the gut-vagina connection*</li>
                     <li>Maintains urinary tract health*</li>
                     <li>Made with 8 strains of good bacteria and is shelfstable*</li>
-                    <li>Made free of sugar (real or artificial), corn syrup,synthetic colors, and                               
-                                            dyes because we don'tabelieve they belong in women's wellnesssupplements
+                    <li>Made free of sugar (real or artificial), corn syrup,synthetic colors, and dyes because we don'tabelieve they belong in women's wellnesssupplements
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="accordion-item border-0 border-bottom">
+            <div class="accordion-item border-0 border-bottom rounded-0">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed bg-transparent rounded-0 px-0"
+                  class="accordion-button collapsed bg-transparent rounded-0 shadow-none px-0"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -335,7 +364,7 @@ variant.compare_at_price | divided_by: variant.title | money }}</s>
                 data-bs-parent="#accordionDetails">
                 <div class="accordion-body px-0">
                   <strong>This is the second item's accordion body.</strong>
-                  It is hidden by default,                               
+                  It is hidden by default,                                                                                                                                               
                                     until the collapse plugin adds the appropriate classes that we use to style each
                                     element. These classes control the overall appearance, as well as the showing and
                                     hiding via CSS transitions. You can modify any of this with custom CSS or overriding
@@ -345,10 +374,10 @@ variant.compare_at_price | divided_by: variant.title | money }}</s>
                 </div>
               </div>
             </div>
-            <div class="accordion-item border-0 border-bottom">
+            <div class="accordion-item border-0 border-bottom rounded-0">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed bg-transparent rounded-0 px-0"
+                  class="accordion-button collapsed bg-transparent rounded-0 shadow-none px-0"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
@@ -363,7 +392,7 @@ variant.compare_at_price | divided_by: variant.title | money }}</s>
                 data-bs-parent="#accordionDetails">
                 <div class="accordion-body px-0">
                   <strong>This is the third item's accordion body.</strong>
-                  It is hidden by default,                               
+                  It is hidden by default,                                                                                                                                               
                                     until the collapse plugin adds the appropriate classes that we use to style each
                                     element. These classes control the overall appearance, as well as the showing and
                                     hiding via CSS transitions. You can modify any of this with custom CSS or overriding
