@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/Group.png",
@@ -15,8 +24,29 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "mega_menu_D9qzWD": {
+            "type": "mega_menu",
+            "settings": {
+              "title": "",
+              "collection": "vaginal-health"
+            }
+          },
+          "mega_menu_zUqYQX": {
+            "type": "mega_menu",
+            "settings": {
+              "title": "Mental",
+              "collection": "mental-health"
+            }
+          }
+        },
+        "block_order": [
+          "mega_menu_D9qzWD",
+          "mega_menu_zUqYQX"
+        ],
         "settings": {
-          "menu": "main-menu"
+          "menu": "main-menu",
+          "mega_menu": true
         }
       },
       "footer": {
